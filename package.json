@@ -19,7 +19,7 @@
     "format":
       "prettier --trailing-comma all --no-semi --single-quote --print-width 120 --jsx-bracket-same-line --write 'src/**/*.js' 'stories/**/*.js'",
     "test": "npm run lint",
-    "lint": "eslint ./src & stylelint \"./src/{components,css}/*.css\"",
+    "lint": "eslint ./src ./stories & stylelint \"./src/{components,css}/*.css\"",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -46,7 +46,7 @@
     "stylelint-config-standard": "^17.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint"],
+    "*.{js,jsx}": ["format", "eslint", "git add"],
     "*.{css}": ["stylelint"]
   }
 }
