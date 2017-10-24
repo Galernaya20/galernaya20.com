@@ -1,7 +1,8 @@
 import React from 'react'
+import {Content} from '../index'
 
 export const Summary = ({children, secondary, inverted = false}) =>
-  <div>
+  <Content>
     <div>{children}</div>
     <div>{secondary}</div>
-  </div>
+  </Content>
