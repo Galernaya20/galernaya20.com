@@ -1,4 +1,3 @@
 import React from 'react'
 
-export const Header = ({children}) =>
-  <div>{children}</div>
+export const Header = ({children}) => <div>{children}</div>
