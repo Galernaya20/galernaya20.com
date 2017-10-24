@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import {defaultHelmetMeta} from '../layouts/index'
+import {defaultMeta} from '../defaultMeta'
 
 const IndexPage = () => (
   <div>
@@ -10,7 +10,7 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
 
-    <Helmet meta={defaultHelmetMeta}>
+    <Helmet meta={defaultMeta}>
       <title>Галерная 20</title>
     </Helmet>
 
