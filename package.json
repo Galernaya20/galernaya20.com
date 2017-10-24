@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "galernaya-20-site",
+  "description": "Galernaya 20 site",
+  "version": "0.0.1",
+  "author": "SPB-Frontend <hi@spb-frontend.ru>",
   "dependencies": {
     "classnames": "^2.2.5",
     "gatsby": "^1.9.73",
