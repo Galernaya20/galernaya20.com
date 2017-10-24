@@ -24,7 +24,11 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "eslint": "^4.9.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
+    "stylelint": "^8.2.0"
   },
   "lint-staged": {
     "*.{js,jsx}": [
