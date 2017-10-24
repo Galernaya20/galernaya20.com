@@ -14,8 +14,7 @@ export const defaultMeta = [
   },
   {
     property: 'og:image',
-    content:
-      'https://pbs.twimg.com/profile_images/1364468666/Logo_G20_for_web_400x400',
+    content: 'https://pbs.twimg.com/profile_images/1364468666/Logo_G20_for_web_400x400',
   },
   {
     property: 'og:url',

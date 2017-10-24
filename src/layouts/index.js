@@ -19,7 +19,7 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{margin: 0}}>
         <Link
           to="/"
           style={{
@@ -34,7 +34,7 @@ const Header = () => (
   </div>
 )
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({children}) => (
   <div>
     <Helmet title="Galernaya 20" />
     <Header />
