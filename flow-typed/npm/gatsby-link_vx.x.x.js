@@ -14,7 +14,7 @@
  */
 
 declare module 'gatsby-link' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,11 +23,10 @@ declare module 'gatsby-link' {
  * needed.
  */
 
-
 // Filename aliases
 declare module 'gatsby-link/index' {
-  declare module.exports: $Exports<'gatsby-link'>;
+  declare module.exports: $Exports<'gatsby-link'>
 }
 declare module 'gatsby-link/index.js' {
-  declare module.exports: $Exports<'gatsby-link'>;
+  declare module.exports: $Exports<'gatsby-link'>
 }
