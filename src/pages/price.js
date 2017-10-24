@@ -2,7 +2,7 @@ import React from 'react'
 
 const PricePage = () => (
   <div>
-    <h1></h1>
+    <h1>Price</h1>
   </div>
 )
 

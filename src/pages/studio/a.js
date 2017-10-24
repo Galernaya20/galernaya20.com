@@ -2,7 +2,7 @@ import React from 'react'
 
 const StudioAPage = () => (
   <div>
-    <h1></h1>
+    <h1>StudioA</h1>
   </div>
 )
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductionPage = () => (
   <div>
-    <h1></h1>
+    <h1>Production</h1>
   </div>
 )
 
