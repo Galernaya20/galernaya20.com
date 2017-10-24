@@ -21,9 +21,16 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src & stylelint \"./src/{components,css}/*.css\"",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "react": "15.6.2",
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/react": "^3.2.13",
+    "babel-eslint": "^8.0.1",
     "eslint": "^4.9.0",
     "eslint-plugin-compat": "^2.0.1",
     "eslint-plugin-import": "^2.8.0",
