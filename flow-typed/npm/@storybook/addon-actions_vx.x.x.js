@@ -14,7 +14,7 @@
  */
 
 declare module '@storybook/addon-actions' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,101 +23,101 @@ declare module '@storybook/addon-actions' {
  * needed.
  */
 declare module '@storybook/addon-actions/dist/components/ActionLogger/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/dist/components/ActionLogger/style' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/dist/containers/ActionLogger/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/dist/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/dist/manager' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/dist/preview' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/register' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/components/ActionLogger/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/components/ActionLogger/style' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/containers/ActionLogger/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/manager' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/preview' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@storybook/addon-actions/src/preview.test' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 // Filename aliases
 declare module '@storybook/addon-actions/dist/components/ActionLogger/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/components/ActionLogger/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/components/ActionLogger/index'>
 }
 declare module '@storybook/addon-actions/dist/components/ActionLogger/style.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/components/ActionLogger/style'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/components/ActionLogger/style'>
 }
 declare module '@storybook/addon-actions/dist/containers/ActionLogger/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/containers/ActionLogger/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/containers/ActionLogger/index'>
 }
 declare module '@storybook/addon-actions/dist/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/index'>
 }
 declare module '@storybook/addon-actions/dist/manager.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/manager'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/manager'>
 }
 declare module '@storybook/addon-actions/dist/preview.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/dist/preview'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/dist/preview'>
 }
 declare module '@storybook/addon-actions/register.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/register'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/register'>
 }
 declare module '@storybook/addon-actions/src/components/ActionLogger/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/components/ActionLogger/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/components/ActionLogger/index'>
 }
 declare module '@storybook/addon-actions/src/components/ActionLogger/style.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/components/ActionLogger/style'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/components/ActionLogger/style'>
 }
 declare module '@storybook/addon-actions/src/containers/ActionLogger/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/containers/ActionLogger/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/containers/ActionLogger/index'>
 }
 declare module '@storybook/addon-actions/src/index.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/index'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/index'>
 }
 declare module '@storybook/addon-actions/src/manager.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/manager'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/manager'>
 }
 declare module '@storybook/addon-actions/src/preview.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/preview'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/preview'>
 }
 declare module '@storybook/addon-actions/src/preview.test.js' {
-  declare module.exports: $Exports<'@storybook/addon-actions/src/preview.test'>;
+  declare module.exports: $Exports<'@storybook/addon-actions/src/preview.test'>
 }

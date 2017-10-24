@@ -1,9 +1,10 @@
 // @flow
 
 import React from 'react'
+import st from './LiveRecording.module.css'
 
 const LiveRecording = () => (
-  <div>
+  <div className={st.container}>
     <h2>Запись live</h2>
     <p>
       Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части

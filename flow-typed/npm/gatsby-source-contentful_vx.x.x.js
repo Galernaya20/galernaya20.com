@@ -14,7 +14,7 @@
  */
 
 declare module 'gatsby-source-contentful' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,86 +23,86 @@ declare module 'gatsby-source-contentful' {
  * needed.
  */
 declare module 'gatsby-source-contentful/extend-node-type' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/fetch' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/fragments' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/gatsby-node' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/normalize' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/scripts/download-data' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/src/extend-node-type' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/src/fetch' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/src/fragments' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/src/gatsby-node' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'gatsby-source-contentful/src/normalize' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 // Filename aliases
 declare module 'gatsby-source-contentful/extend-node-type.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/extend-node-type'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/extend-node-type'>
 }
 declare module 'gatsby-source-contentful/fetch.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/fetch'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/fetch'>
 }
 declare module 'gatsby-source-contentful/fragments.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/fragments'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/fragments'>
 }
 declare module 'gatsby-source-contentful/gatsby-node.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/gatsby-node'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/gatsby-node'>
 }
 declare module 'gatsby-source-contentful/index' {
-  declare module.exports: $Exports<'gatsby-source-contentful'>;
+  declare module.exports: $Exports<'gatsby-source-contentful'>
 }
 declare module 'gatsby-source-contentful/index.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful'>;
+  declare module.exports: $Exports<'gatsby-source-contentful'>
 }
 declare module 'gatsby-source-contentful/normalize.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/normalize'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/normalize'>
 }
 declare module 'gatsby-source-contentful/scripts/download-data.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/scripts/download-data'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/scripts/download-data'>
 }
 declare module 'gatsby-source-contentful/src/extend-node-type.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/src/extend-node-type'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/src/extend-node-type'>
 }
 declare module 'gatsby-source-contentful/src/fetch.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/src/fetch'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/src/fetch'>
 }
 declare module 'gatsby-source-contentful/src/fragments.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/src/fragments'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/src/fragments'>
 }
 declare module 'gatsby-source-contentful/src/gatsby-node.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/src/gatsby-node'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/src/gatsby-node'>
 }
 declare module 'gatsby-source-contentful/src/normalize.js' {
-  declare module.exports: $Exports<'gatsby-source-contentful/src/normalize'>;
+  declare module.exports: $Exports<'gatsby-source-contentful/src/normalize'>
 }
