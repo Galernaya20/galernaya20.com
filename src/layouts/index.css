@@ -17,16 +17,11 @@ body {
 }
 
 a {
-  background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 img {
   border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
 }
 
 [type=button]::-moz-focus-inner,
