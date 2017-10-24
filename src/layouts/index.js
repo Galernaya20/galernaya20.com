@@ -70,20 +70,20 @@ export const defaultHelmetMeta = [
   },
   {
     property: 'og:title',
-    content: 'SPB Frontend',
+    content: 'GALERNAYA 20',
   },
   {
     property: 'og:description',
-    content: 'Петербургское сообщество фронтенд-разработчиков',
+    content: 'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
   },
   {
     property: 'og:image',
     content:
-      'https://ucarecdn.com/3d33c161-b440-4710-b3dd-ad980640dba8/-/preview/-/resize/1200x/-/crop/1200x630/0,300/spb_frontend_social.png',
+      'https://pbs.twimg.com/profile_images/1364468666/Logo_G20_for_web_400x400',
   },
   {
     property: 'og:url',
-    content: 'http://spb-frontend.ru/',
+    content: 'http://galernaya20.com/',
   },
   {
     name: 'twitter:card',
@@ -91,18 +91,18 @@ export const defaultHelmetMeta = [
   },
   {
     name: 'twitter:site',
-    content: '@spb_frontend',
+    content: '@Galernaya20',
   },
   {
     name: 'twitter:image:alt',
-    content: 'SPB Frontend. Frontend artisans',
+    content: 'GALERNAYA 20 - студия звукозаписи',
   },
   {
     name: 'description',
-    content: 'Петербургское сообщество фронтенд-разработчиков',
+    content: 'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
   },
   {
     name: 'keywords',
-    content: 'frontend, spb-frontend',
+    content: 'galernaya 20, sound production',
   },
 ]
