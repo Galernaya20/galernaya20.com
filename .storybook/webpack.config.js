@@ -8,8 +8,6 @@ const program = {
 }
 
 module.exports = function customiseStorybookConfig(storybookBaseConfig) {
-  console.log(storybookBaseConfig)
-
   return {
     ...storybookBaseConfig,
     module: {
