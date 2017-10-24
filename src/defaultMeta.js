@@ -9,12 +9,12 @@ export const defaultMeta = [
   },
   {
     property: 'og:description',
-    content: 'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
+    content:
+      'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
   },
   {
     property: 'og:image',
-    content:
-      'https://pbs.twimg.com/profile_images/1364468666/Logo_G20_for_web_400x400',
+    content: 'https://pbs.twimg.com/profile_images/1364468666/Logo_G20_for_web_400x400',
   },
   {
     property: 'og:url',
@@ -34,7 +34,8 @@ export const defaultMeta = [
   },
   {
     name: 'description',
-    content: 'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
+    content:
+      'GALERNAYA 20 - это творческий синдикат, в состав которого входят: Студия звукозаписи интернет-радио арт и хэппинг сектор',
   },
   {
     name: 'keywords',
