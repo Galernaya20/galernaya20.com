@@ -14,7 +14,7 @@ import {
 } from 'video-react'
 import 'video-react/dist/video-react.css'
 
-const MainVideo = () => (
+export const MainVideo = () => (
   <div className={st.row}>
     <div className={st.col}>
       <h2 className={st.header}>Студия звукозаписи</h2>
@@ -39,5 +39,3 @@ const MainVideo = () => (
     </div>
   </div>
 )
-
-export default MainVideo
