@@ -1,0 +1,13 @@
+.self {
+  display: flex;
+  flex-direction: column;
+  padding: 60px calc((100% - 600px) / 2) calc(60px - 32px);
+
+  @media (max-width: 700px) {
+    padding: 40px 20px calc(40px - 24px);
+  }
+
+  @media (min-width: 1250px) {
+    padding: 80px calc((100% - 800px) / 2) calc(80px - 32px);
+  }
+}
