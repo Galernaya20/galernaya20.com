@@ -1,6 +1,9 @@
+//@flow
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import {Reviews} from '../src/components'
+import {Reviews, MainVideo} from '../src/components'
+
+storiesOf('MainVideo', module).add('mainVideo', () => <MainVideo />)
 
 storiesOf('Reviews', module).add('reviews', () => (
   <Reviews

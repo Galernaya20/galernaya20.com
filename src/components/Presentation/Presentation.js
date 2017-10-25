@@ -1,6 +1,8 @@
+//@flow
+
 import React from 'react'
 
-export const Presentation = ({children, background = {color: 'grey', image: null}}) => (
+export const Presentation = ({children, background = {color: 'grey', image: null}}: any) => (
   <div
     style={{
       backgroundColor: background.color,

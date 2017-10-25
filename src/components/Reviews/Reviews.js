@@ -1,8 +1,10 @@
+//@flow
+
 import React, {Component} from 'react'
 import cn from 'classnames'
 import st from './Reviews.module.css'
 
-class Reviews extends Component {
+class Reviews extends Component<*> {
   render() {
     const {reviews} = this.props
     return (
