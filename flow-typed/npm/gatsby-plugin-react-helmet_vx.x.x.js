@@ -14,7 +14,7 @@
  */
 
 declare module 'gatsby-plugin-react-helmet' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,16 +23,16 @@ declare module 'gatsby-plugin-react-helmet' {
  * needed.
  */
 declare module 'gatsby-plugin-react-helmet/gatsby-ssr' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 // Filename aliases
 declare module 'gatsby-plugin-react-helmet/gatsby-ssr.js' {
-  declare module.exports: $Exports<'gatsby-plugin-react-helmet/gatsby-ssr'>;
+  declare module.exports: $Exports<'gatsby-plugin-react-helmet/gatsby-ssr'>
 }
 declare module 'gatsby-plugin-react-helmet/index' {
-  declare module.exports: $Exports<'gatsby-plugin-react-helmet'>;
+  declare module.exports: $Exports<'gatsby-plugin-react-helmet'>
 }
 declare module 'gatsby-plugin-react-helmet/index.js' {
-  declare module.exports: $Exports<'gatsby-plugin-react-helmet'>;
+  declare module.exports: $Exports<'gatsby-plugin-react-helmet'>
 }
