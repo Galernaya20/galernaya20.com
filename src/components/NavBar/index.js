@@ -9,6 +9,7 @@ export const NavBar = () => (
         <img
           src="http://galernaya20.com/wp-content/uploads/2015/06/Logo-Galernaya-201.png"
           alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
+          className={style.logoImg}
         />
       </Link>
 

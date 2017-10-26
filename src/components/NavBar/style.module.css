@@ -20,6 +20,10 @@
   color: #333;
 }
 
+.logoImg {
+  max-width: 100%;
+}
+
 .menu {
   display: flex;
   flex-grow: 1;
