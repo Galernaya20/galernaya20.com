@@ -2,6 +2,7 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {Reviews, NavBar} from '../src/components'
 import {contextDecorator} from './decorators'
+import '../src/layouts/index.css'
 
 storiesOf('NavBar', module)
   .addDecorator(
