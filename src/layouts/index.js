@@ -1,10 +1,12 @@
+//@flow
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import './index.css'
 
-const TemplateWrapper = ({children}) => (
+const TemplateWrapper = ({children}: {children: *}) => (
   <div>
     <Helmet title="Galernaya 20" />
     <div>{children()}</div>
