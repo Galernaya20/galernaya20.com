@@ -1,6 +1,21 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import {Reviews} from '../src/components'
+import {Reviews, NavBar} from '../src/components'
+import {contextDecorator} from './decorators'
+
+storiesOf('NavBar', module)
+  .addDecorator(
+    contextDecorator({
+      router: {
+        history: {
+          isActive: () => false,
+          location: {pathname: '', query: {auth: false}},
+          createHref: id => id,
+        },
+      },
+    }),
+  )
+  .add('NavBar', () => <NavBar />)
 
 storiesOf('Reviews', module).add('reviews', () => (
   <Reviews
