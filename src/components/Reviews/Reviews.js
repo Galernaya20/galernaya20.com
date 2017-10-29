@@ -4,7 +4,11 @@ import React, {Component} from 'react'
 import cn from 'classnames'
 import st from './Reviews.module.css'
 
-class Reviews extends Component<*> {
+type PropsT = {
+  reviews: Array<{author: string, text: string, photo: string}>,
+}
+
+class Reviews extends Component<PropsT> {
   render() {
     const {reviews} = this.props
     return (

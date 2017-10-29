@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 
-const TemplateWrapper = ({children}: any) => (
+const TemplateWrapper = ({children}: {children: *}) => (
   <div>
     <Helmet title="Galernaya 20" />
     <div>{children()}</div>
