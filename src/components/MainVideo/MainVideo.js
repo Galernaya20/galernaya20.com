@@ -2,6 +2,8 @@
 
 import React from 'react'
 import st from './index.module.css'
+import {Content} from '../Content/Content'
+import {Header} from '../Header/Header'
 import {
   Player,
   ControlBar,
@@ -15,27 +17,25 @@ import {
 import 'video-react/dist/video-react.css'
 
 export const MainVideo = () => (
-  <div className={st.row}>
-    <div className={st.col}>
-      <h2 className={st.header}>Студия звукозаписи</h2>
-      <p className={st.description}>Коротко о том, что это и какие услуги и для кого</p>
-      <div className={st.videoWrapper}>
-        <div className={st.video}>
-          <Player className={st.player} poster="/assets/poster.png">
-            <source src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4" />
-            <source src="http://mirrorblender.top-ix.org/movies/sintel-1024-surround.mp4" />
+  <Header>
+    <h2 className={st.header}>Студия звукозаписи</h2>
+    <p className={st.description}>Коротко о том, что это и какие услуги и для кого</p>
+    <div className={st.videoWrapper}>
+      <div className={st.video}>
+        <Player className={st.player} poster="/assets/poster.png">
+          <source src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4" />
+          <source src="http://mirrorblender.top-ix.org/movies/sintel-1024-surround.mp4" />
 
-            <ControlBar>
-              <ReplayControl seconds={10} order={1.1} />
-              <ForwardControl seconds={30} order={1.2} />
-              <CurrentTimeDisplay order={4.1} />
-              <TimeDivider order={4.2} />
-              <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
-              <VolumeMenuButton disabled />
-            </ControlBar>
-          </Player>
-        </div>
+          <ControlBar>
+            <ReplayControl seconds={10} order={1.1} />
+            <ForwardControl seconds={30} order={1.2} />
+            <CurrentTimeDisplay order={4.1} />
+            <TimeDivider order={4.2} />
+            <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
+            <VolumeMenuButton disabled />
+          </ControlBar>
+        </Player>
       </div>
     </div>
-  </div>
+  </Header>
 )
