@@ -13,6 +13,7 @@ import {
   TimeDivider,
   PlaybackRateMenuButton,
   VolumeMenuButton,
+  BigPlayButton,
 } from 'video-react'
 import 'video-react/dist/video-react.css'
 
@@ -25,6 +26,8 @@ export const MainVideo = () => (
         <Player className={st.player} poster="/assets/poster.png">
           <source src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4" />
           <source src="http://mirrorblender.top-ix.org/movies/sintel-1024-surround.mp4" />
+
+          <BigPlayButton position="center" />
 
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
