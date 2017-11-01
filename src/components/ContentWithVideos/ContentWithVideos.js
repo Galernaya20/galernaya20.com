@@ -9,7 +9,7 @@ const defaultVideoSize = {
   height: 250,
 }
 
-const LiveRecording = ({
+const ContentWithVideos = ({
   children,
   videoIds,
   videoSize,
@@ -36,4 +36,4 @@ const LiveRecording = ({
   </Content>
 )
 
-export default LiveRecording
+export default ContentWithVideos
