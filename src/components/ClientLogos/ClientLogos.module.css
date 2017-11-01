@@ -1,20 +1,19 @@
 .self {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   background-color: #353535;
-  padding: 10px 0;
+  flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
   justify-content: center;
-  width: 18%;
-  height: 100%;
+  align-items: center;
+  margin: 10px 5px;
 }
 
 .logoImg {
-  max-width: 100%;
+  width: auto;
   max-height: 100%;
 }
