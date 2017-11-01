@@ -11,8 +11,7 @@ const program = {
 }
 
 module.exports = function customiseStorybookConfig(storybookBaseConfig) {
-  return {
-    ...storybookBaseConfig,
+  return Object.assign({}, storybookBaseConfig, {
     module: {
       rules: [
         ...storybookBaseConfig.module.rules,
@@ -44,5 +43,5 @@ module.exports = function customiseStorybookConfig(storybookBaseConfig) {
         },
       ],
     },
-  }
+  })
 }
