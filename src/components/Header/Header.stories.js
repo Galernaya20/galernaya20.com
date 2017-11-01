@@ -1,9 +1,7 @@
 //@flow
-import './Reviews'
-
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import {Reviews, Header} from '../src/components'
+import {Header} from './Header.js'
 
 storiesOf('Header', module)
   .add('withVideo', () => (
