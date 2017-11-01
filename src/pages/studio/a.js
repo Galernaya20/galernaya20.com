@@ -5,10 +5,7 @@ import {Header, Presentation, Summary} from '../../components'
 
 const StudioAPage = () => (
   <div>
-    <Header>
-      <h1>Аренда студия звукозаписи А</h1>
-      <p>Небольшая студия для записи вокала</p>
-    </Header>
+    <Header title="Аренда студия звукозаписи А" description="Небольшая студия для записи вокала" />
     <Summary secondary={<Presentation background={{image: 'http://via.placeholder.com/600x600'}} />}>
       <h2>Оснащение студии</h2>
       <p>
