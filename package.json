@@ -10,15 +10,14 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-source-contentful": "^1.3.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma all --no-semi --single-quote --print-width 120 --jsx-bracket-same-line --write 'src/**/*.js' 'stories/**/*.js'",
+    "format":
+      "prettier --trailing-comma all --no-semi --single-quote --print-width 120 --jsx-bracket-same-line --write 'src/**/*.js' 'stories/**/*.js'",
     "test": "npm run lint",
     "lint": "eslint ./src ./stories & stylelint \"./src/{components,css}/*.css\"",
     "precommit": "lint-staged",
@@ -47,13 +46,7 @@
     "stylelint-config-standard": "^17.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "format",
-      "eslint",
-      "git add"
-    ],
-    "*.{css}": [
-      "stylelint"
-    ]
+    "*.{js,jsx}": ["format", "eslint", "git add"],
+    "*.{css}": ["stylelint"]
   }
 }
