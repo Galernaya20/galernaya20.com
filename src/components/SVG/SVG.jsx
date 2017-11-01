@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
-import st from './SVG.pcss'
+import st from './SVG.module.css'
 
 export const SVG = ({children, width, height, className}) => (
   <svg
