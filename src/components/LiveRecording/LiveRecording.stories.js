@@ -1,9 +1,9 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import LiveRecording from '../src/components/LiveRecording'
+import LiveRecording from './LiveRecording'
 
-storiesOf('Page/LiveRecording', module).add('standart', () => (
+storiesOf('LiveRecording', module).add('standart', () => (
   <LiveRecording
     header="Запись live"
     explanation={
