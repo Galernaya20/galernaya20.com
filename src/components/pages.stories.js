@@ -8,7 +8,7 @@ import LiveRecording from './LiveRecording'
 import {Header} from './Header/Header'
 import {NavBar} from './NavBar/NavBar'
 
-storiesOf('MainPage', module)
+storiesOf('Pages', module)
   .addDecorator(
     contextDecorator({
       router: {
@@ -20,7 +20,7 @@ storiesOf('MainPage', module)
       },
     }),
   )
-  .add('simple', () => (
+  .add('studio', () => (
     <div>
       <NavBar />
       <Header
