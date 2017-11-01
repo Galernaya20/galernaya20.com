@@ -1,3 +1,4 @@
+//@flow
 import React from 'react'
 import st from './NavBar.module.css'
 import Link from 'gatsby-link'

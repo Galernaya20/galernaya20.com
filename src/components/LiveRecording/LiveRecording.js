@@ -15,9 +15,9 @@ const LiveRecording = ({
   cost,
   videoIds,
 }: {
-  header: React.ReactElement<*>[],
-  explanation: React.ReactElement<*>[],
-  cost: React.ReactElement<*>[],
+  header: React$Element<*>[],
+  explanation: React$Element<*>[],
+  cost: React$Element<*>[],
   videoIds: string[],
 }) => (
   <Content className={st.container}>
