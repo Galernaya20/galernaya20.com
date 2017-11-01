@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import {Content} from '../index'
 import st from './LiveRecording.module.css'
 
 const videoSize = {
@@ -8,36 +9,29 @@ const videoSize = {
   height: 250,
 }
 
-const LiveRecording = () => (
-  <div className={st.container}>
-    <h2>Запись live</h2>
-    <p>
-      Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
-    </p>
-    <p>Стоимость от 600 руб.</p>
+const LiveRecording = ({
+  header,
+  explanation,
+  cost,
+  videoIds,
+}: {
+  header: React.ReactElement<*>[],
+  explanation: React.ReactElement<*>[],
+  cost: React.ReactElement<*>[],
+  videoIds: string[],
+}) => (
+  <Content className={st.container}>
+    <h2>{header}</h2>
+    <p>{explanation}</p>
+    <p>{cost}</p>
     <div className={st.videoContainer}>
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/FUtrw7GtdfM"
-          frameBorder="0"
-          allowFullscreen
-          {...videoSize}
-        />
-      </div>
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/DcJFdCmN98s"
-          frameBorder="0"
-          allowFullscreen
-          {...videoSize}
-        />
-      </div>
+      {videoIds.map(videoId => (
+        <div className={st.video} key={videoId}>
+          <iframe src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullscreen {...videoSize} />
+        </div>
+      ))}
     </div>
-  </div>
+  </Content>
 )
 
 export default LiveRecording

@@ -1,7 +1,13 @@
 .container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.video {
+  margin-right: 40px;
+}
+
+.video:last-of-type {
+  margin-right: 0;
 }
 
 .videoContainer {
