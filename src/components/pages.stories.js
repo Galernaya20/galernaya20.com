@@ -4,7 +4,7 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {contextDecorator} from '../../stories/decorators'
 
-import LiveRecording from './LiveRecording'
+import {ContentWithVideos} from './ContentWithVideos/ContentWithVideos'
 import {Header} from './Header/Header'
 import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
@@ -38,7 +38,7 @@ storiesOf('Pages', module)
         </p>
       </Content>
 
-      <LiveRecording
+      <ContentWithVideos
         header="Запись live"
         explanation={
           <span>
