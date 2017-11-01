@@ -8,6 +8,7 @@ import LiveRecording from './LiveRecording'
 import {Header} from './Header/Header'
 import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
+import {ClientLogos} from './ClientLogos/ClientLogos'
 
 storiesOf('Pages', module)
   .addDecorator(
@@ -37,18 +38,7 @@ storiesOf('Pages', module)
           until it does wrap.
         </p>
       </Content>
-
-      <LiveRecording
-        header="Запись live"
-        explanation={
-          <span>
-            Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
-          </span>
-        }
-        cost="Стоимость от 600 руб."
-        videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}
-      />
-
+      <ClientLogos />
       <Content presentation={<div>I’m presentation</div>} inverted>
         <h2>Heading 2</h2>
         <p>
@@ -63,5 +53,15 @@ storiesOf('Pages', module)
           until it does wrap.
         </p>
       </Content>
+      <LiveRecording
+        header="Запись live"
+        explanation={
+          <span>
+            Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
+          </span>
+        }
+        cost="Стоимость от 600 руб."
+        videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}
+      />
     </div>
   ))
