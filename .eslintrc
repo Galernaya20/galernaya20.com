@@ -17,7 +17,7 @@
     "react/jsx-first-prop-new-line": [2, "multiline"],
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],
-    "react/jsx-max-props-per-line": [2, {"maximum": 2, "when": "always"}],
+    "react/jsx-max-props-per-line": [2, {"maximum": 1, "when": "multiline"}],
     "react/jsx-no-bind": [0],
     "react/no-deprecated": [2],
     "react/no-did-mount-set-state": [2],
