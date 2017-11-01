@@ -1,6 +1,9 @@
 const path = require('path')
 const gatsbyWebpack = require('gatsby/dist/utils/webpack.config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const cssnext = require('postcss-cssnext')
+const webpack = require('webpack')
+
 const directory = path.resolve(__dirname, '../')
 const suppliedStage = 'develop'
 const program = {
@@ -14,11 +17,29 @@ module.exports = function customiseStorybookConfig(storybookBaseConfig) {
       rules: [
         ...storybookBaseConfig.module.rules,
         {
-          test: /\.css$/,
+          test: /^((?!\.module).)*css$/,
+          use: [
+            'style-loader',
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [cssnext()],
+              },
+            },
+          ],
+        },
+        {
+          test: /\.module.css$/,
           use: [
             'style-loader',
             'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [cssnext()],
+              },
+            },
           ],
         },
       ],
