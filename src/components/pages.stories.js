@@ -65,3 +65,50 @@ storiesOf('Pages', module)
       </Content>
     </div>
   ))
+  .add('education', () => (
+    <div>
+      <NavBar />
+      <Header title="Образовательные программы" description="Курсы лекций про саунд, продюссирование и запись музыки" />
+      <Content presentation={<div>I’m presentation</div>}>
+        <h2>Самопродюссирование</h2>
+        <p>
+          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
+          until it does wrap.
+        </p>
+        <p>
+          <strong>Стоимость от 600 руб.</strong>
+        </p>
+        <p>
+          <a href="#">Подробности</a>
+        </p>
+      </Content>
+
+      <Content presentation={<div>I’m presentation</div>} inverted>
+        <h2>Запись и сведение</h2>
+        <p>
+          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
+          until it does wrap.
+        </p>
+        <p>
+          <strong>Стоимость от 600 руб.</strong>
+        </p>
+        <p>
+          <a href="#">Подробности</a>
+        </p>
+      </Content>
+
+      <Content presentation={<div>I’m presentation</div>}>
+        <h2>Диджеинг</h2>
+        <p>
+          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
+          until it does wrap.
+        </p>
+        <p>
+          <strong>Стоимость от 600 руб.</strong>
+        </p>
+        <p>
+          <a href="#">Подробности</a>
+        </p>
+      </Content>
+    </div>
+  ))
