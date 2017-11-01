@@ -20,7 +20,7 @@ const LiveRecording = ({
   cost: string,
   videoIds: string[],
 }) => (
-  <Content className={st.container}>
+  <Content className={st.container} centered>
     <h2>{header}</h2>
     <p>{explanation}</p>
     <p>{cost}</p>
