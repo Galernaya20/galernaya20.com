@@ -8,7 +8,7 @@ export const Presentation = ({
   background = {color: 'grey', image: null},
 }: {
   children?: *,
-  background: {color?: string, image: string | null},
+  background?: {color?: string, image?: string | null},
 }) => (
   <div
     className={st.self}
