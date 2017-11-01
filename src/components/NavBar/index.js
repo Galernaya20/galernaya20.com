@@ -7,7 +7,7 @@ export const NavBar = () => (
     <nav className={st.wrapper}>
       <Link to="/" className={st.logo}>
         <img
-          src="http://galernaya20.com/wp-content/uploads/2015/06/Logo-Galernaya-201.png"
+          src="/assets/logo.png"
           alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
           className={st.logoImg}
         />
