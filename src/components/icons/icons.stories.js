@@ -7,3 +7,8 @@ import {CloseIcon} from './CloseIcon'
 storiesOf('Icons', module)
   .add('Hamburger', () => <HamburgerIcon />)
   .add('Close', () => <CloseIcon />)
+  .add('colored icons', () => (
+    <div style={{color: 'red'}}>
+      <HamburgerIcon />
+    </div>
+  ))
