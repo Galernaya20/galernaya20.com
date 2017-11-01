@@ -33,7 +33,7 @@ storiesOf('Reviews', module)
         },
         {
           text:
-            'Vestibulum erat ex, dictum et dapibus sed, tempor sit amet mi. Sed rutrum enim eget feugiat posuere. Donec at sodales erat. Quisque ultricies posuere tortor, non laoreet metus dignissim vel. Suspendisse placerat consequat metus, dignissim vehicula velit. Integer vulputate nisl a tellus rhoncus, et rutrum justo auctor. Ut neque nisi, ultrices sit amet imperdiet nec, fermentum eget odio. Nullam mi dolor, cursus eget tellus ac, volutpat auctor urna. Morbi condimentum turpis nec massa aliquam, at eleifend nunc hendrerit. Ut sit amet ante mi. Phasellus vitae eros sagittis, dictum metus ut, molestie ante. Proin elementum molestie arcu ut hendrerit. Donec auctor, leo id imperdiet pulvinar, elit purus viverra libero, sed hendrerit arcu erat id odio. Vestibulum efficitur justo eu felis finibus volutpat. Mauris et magna tincidunt, viverra nisi non, lacinia massa. Pellentesque sollicitudin luctus scelerisque.',
+            'Fusce a augue id sapien porta pretium eu vitae est. In vitae cursus nulla. Vivamus semper, lectus at faucibus luctus, elit neque auctor erat, nec varius lacus augue id nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur dignissim eget orci at mattis. Praesent eu est id odio porttitor gravida nec eu dolor. Sed efficitur diam sit amet ipsum ultricies aliquet. Fusce nec tellus vel libero lacinia accumsan et luctus ex.',
           author: 'Batman',
           photo: 'https://ucarecdn.com/5b802641-cd9d-4a10-adf1-3dffa9709e29/akurganowsquare.jpg',
         },
