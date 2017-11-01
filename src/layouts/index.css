@@ -4,10 +4,12 @@ html {
                "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
+  font-size: 16px;
+  line-height: 1.5;
 
-* {
-  box-sizing: inherit;
+  @media (min-width: 1250px) {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -41,4 +43,25 @@ button:-moz-focusring {
 
 table {
   border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0 0 32px;
+
+  @media (max-width: 700px) {
+    padding-bottom: 24px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }

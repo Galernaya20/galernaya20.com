@@ -1,3 +1,5 @@
+//@flow
+
 export const defaultMeta = [
   {
     name: 'theme-color',
