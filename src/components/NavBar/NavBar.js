@@ -1,5 +1,5 @@
 import React from 'react'
-import st from './style.module.css'
+import st from './NavBar.module.css'
 import Link from 'gatsby-link'
 
 export const NavBar = () => (
@@ -7,7 +7,7 @@ export const NavBar = () => (
     <nav className={st.wrapper}>
       <Link to="/" className={st.logo}>
         <img
-          src="/assets/logo.png"
+          src="http://via.placeholder.com/150x50"
           alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
           className={st.logoImg}
         />
