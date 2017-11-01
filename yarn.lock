@@ -533,7 +533,7 @@ axios@^0.16.1:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
-"axios@github:contentful/axios#fix/https-via-http-proxy":
+axios@contentful/axios#fix/https-via-http-proxy:
   version "0.16.2"
   resolved "https://codeload.github.com/contentful/axios/tar.gz/e9a9c62ce02115f7a4d7f197ba43362dcf0ea3d0"
   dependencies:
