@@ -4,7 +4,7 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {contextDecorator} from '../../stories/decorators'
 
-import LiveRecording from './LiveRecording'
+import {ContentWithVideos} from './ContentWithVideos/ContentWithVideos'
 import {Header} from './Header/Header'
 import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
@@ -38,7 +38,17 @@ storiesOf('Pages', module)
           until it does wrap.
         </p>
       </Content>
+
+      <ContentWithVideos videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}>
+        <h2>Запись live</h2>
+        <p>
+          Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
+        </p>
+        <p>Стоимость от 600 руб.</p>
+      </ContentWithVideos>
+
       <ClientLogos />
+
       <Content presentation={<div>I’m presentation</div>} inverted>
         <h2>Heading 2</h2>
         <p>
@@ -53,15 +63,5 @@ storiesOf('Pages', module)
           until it does wrap.
         </p>
       </Content>
-      <LiveRecording
-        header="Запись live"
-        explanation={
-          <span>
-            Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
-          </span>
-        }
-        cost="Стоимость от 600 руб."
-        videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}
-      />
     </div>
   ))

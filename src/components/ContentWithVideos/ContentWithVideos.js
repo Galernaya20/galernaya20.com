@@ -9,7 +9,7 @@ const defaultVideoSize = {
   height: 250,
 }
 
-const ContentWithVideos = ({
+export const ContentWithVideos = ({
   children,
   videoIds,
   videoSize,
@@ -35,5 +35,3 @@ const ContentWithVideos = ({
     </div>
   </Content>
 )
-
-export default ContentWithVideos

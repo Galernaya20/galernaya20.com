@@ -1,7 +1,7 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import ContentWithVideos from './ContentWithVideos'
+import {ContentWithVideos} from './ContentWithVideos'
 
 storiesOf('ContentWithVideos', module).add('standart', () => (
   <ContentWithVideos videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}>
