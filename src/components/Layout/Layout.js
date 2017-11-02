@@ -1,9 +1,7 @@
 //@flow
 import React from 'react'
 import Head from 'next/head'
-import {NavBar} from '../components/NavBar/NavBar'
-
-import './index.css'
+import {NavBar} from '../NavBar/NavBar'
 
 export const Layout = ({children}: {children: *}) => (
   <div>

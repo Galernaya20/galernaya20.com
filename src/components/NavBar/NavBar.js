@@ -1,40 +1,42 @@
 //@flow
 import React from 'react'
 import st from './NavBar.module.css'
-import Link from 'gatsby-link'
+import Link from 'next/link'
 
 export const NavBar = () => (
   <div className={st.header}>
     <nav className={st.wrapper}>
-      <Link to="/" className={st.logo}>
-        <img
-          src="http://via.placeholder.com/150x50"
-          alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
-          className={st.logoImg}
-        />
+      <Link href="/">
+        <a className={st.logo}>
+          <img
+            src="http://via.placeholder.com/150x50"
+            alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
+            className={st.logoImg}
+          />
+        </a>
       </Link>
 
       <ul className={st.menu}>
         <li className={st.menuItem}>
-          <Link to="/">Студия</Link>
+          <Link href="/"><a>Студия</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/production">Продакшн</Link>
+          <Link href="/production"><a>Продакшн</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/equipment">Оборудование</Link>
+          <Link href="/equipment"><a>Оборудование</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/school">Школа</Link>
+          <Link href="/school"><a>Школа</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/team">Команда</Link>
+          <Link href="/team"><a>Команда</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/price">Цены</Link>
+          <Link href="/price"><a>Цены</a></Link>
         </li>
         <li className={st.menuItem}>
-          <Link to="/contacts">Контакты</Link>
+          <Link href="/contacts"><a>Контакты</a></Link>
         </li>
       </ul>
 

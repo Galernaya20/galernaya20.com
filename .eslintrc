@@ -13,6 +13,7 @@
     "no-plusplus": [0],
     "no-unused-vars": [0],
     "quotes": ["error", "single"],
+    "react/display-name": [0],
     "react/jsx-boolean-value": [0],
     "react/jsx-first-prop-new-line": [2, "multiline"],
     "react/jsx-indent": [2, 2],
