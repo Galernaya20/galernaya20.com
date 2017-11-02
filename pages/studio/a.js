@@ -1,7 +1,7 @@
 //@flow
 
 import React from 'react'
-import {Header, Presentation, Content} from '../../components'
+import {Header, Presentation, Content} from '../../src/components/index'
 
 const StudioAPage = () => (
   <div>
