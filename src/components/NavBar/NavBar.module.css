@@ -7,6 +7,7 @@
 
 .wrapper {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   max-width: 960px;
@@ -15,6 +16,7 @@
 
 .logo {
   width: 150px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   color: #333;
@@ -25,19 +27,26 @@
 }
 
 .menu {
+  order: 1;
+}
+
+.menuList {
   display: flex;
-  flex-grow: 1;
   align-items: center;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   list-style-type: none;
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .contacts {
   display: flex;
+  order: 2;
   align-items: center;
+  padding: 0 10px;
 }
 
 .menuItem {
@@ -52,10 +61,48 @@
   align-items: center;
   padding: 0 10px;
   height: 100%;
+  width: 100%;
   color: #333;
   text-decoration: none;
 }
 
 .menuItem a:hover {
   color: #aaa;
+}
+
+.hamburger {
+  display: none;
+  height: 100%;
+  width: 65px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #aaaaaa;
+}
+
+.hamburger:hover {
+  background: #EEEEEE;
+  color: #000;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    order: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menuList {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menuItem {
+    height: auto;
+    width: 100%;
+  }
 }
