@@ -13,10 +13,6 @@ export class NavBar extends Component {
     this.state = {
       isOpen: false,
     }
-
-    this.toggleMenu = this.toggleMenu.bind(this)
-    this.closeMenu = this.closeMenu.bind(this)
-    this.onResize = this.onResize.bind(this)
   }
 
   componentDidMount() {
@@ -27,17 +23,17 @@ export class NavBar extends Component {
     window.removeEventListener('resize', this.onResize)
   }
 
-  onResize() {
+  onResize = () => {
     if (window.innerWidth >= 1000 && this.state.isOpen) {
       this.closeMenu()
     }
   }
 
-  toggleMenu() {
+  toggleMenu = () => {
     this.setState({isOpen: !this.state.isOpen})
   }
 
-  closeMenu() {
+  closeMenu = () => {
     this.setState({isOpen: false})
   }
 
