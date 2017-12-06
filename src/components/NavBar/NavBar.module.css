@@ -99,10 +99,16 @@
     position: absolute;
     flex-direction: column;
     align-items: start;
+    background: #eee;
+  }
+
+  .open {
+    display: block;
   }
 
   .menuItem {
     height: auto;
     width: 100%;
+    min-height: 30px;
   }
 }
