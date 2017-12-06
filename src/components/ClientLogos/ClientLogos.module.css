@@ -1,0 +1,19 @@
+.self {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #353535;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+}
+
+.logoImg {
+  width: auto;
+  max-height: 100%;
+}

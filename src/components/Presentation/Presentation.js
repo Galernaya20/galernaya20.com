@@ -5,10 +5,10 @@ import st from './Presentation.module.css'
 
 export const Presentation = ({
   children,
-  background = {color: 'grey', image: null},
+  background = {color: 'grey'},
 }: {
   children?: *,
-  background: {color?: string, image: string | null},
+  background?: {color?: string, image?: string},
 }) => (
   <div
     className={st.self}
