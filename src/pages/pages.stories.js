@@ -4,11 +4,11 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {contextDecorator} from '../../stories/decorators'
 
-import {ContentWithVideos} from './ContentWithVideos/ContentWithVideos'
-import {Header} from './Header/Header'
-import {Content} from './Content/Content'
-import {NavBar} from './NavBar/NavBar'
-import {ClientLogos} from './ClientLogos/ClientLogos'
+import {ContentWithVideos} from '../components/ContentWithVideos'
+import {Header} from '../components/Header/Header'
+import {Content} from '../components/Content/Content'
+import {NavBar} from '../components/NavBar/NavBar'
+import {ClientLogos} from '../components/ClientLogos/ClientLogos'
 
 storiesOf('Pages', module)
   .addDecorator(
