@@ -1,13 +1,21 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Require
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Node version is v8.4.0
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+# Gatsby app install and run
+
 ```
-gatsby new gatsby-example-site
+yarn install
+npm run develop
+open localhost:8000
 ```
 
-## Deploy
+# Storybook install and run
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```
+cd .storybook
+npm install
+cd ..
+npm run storybook
+open localhost:6006
+```
