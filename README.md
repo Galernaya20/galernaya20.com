@@ -1,8 +1,13 @@
 # Require
 
-Node version is v8.4.0
+Node version is v8.7.0
+
+npm install --global yarn@v0.24.6
 
 # Gatsby app install and run
+
+!IMPORTANT
+Ensure `yarn version` is v0.24.6
 
 ```
 yarn install
