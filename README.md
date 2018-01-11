@@ -24,3 +24,11 @@ cd ..
 npm run storybook
 open localhost:6006
 ```
+
+# Contentful-importer
+```
+gem install contentful-importer
+cd galernaya_data_for_import
+contentful-importer --configuration=settings.yml import
+contentful-importer --configuration = settings.yml publish
+```
