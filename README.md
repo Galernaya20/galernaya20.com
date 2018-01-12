@@ -37,7 +37,7 @@ More info https://github.com/contentful-labs/contentful-importer.rb
 
 # Wordpress-exporter
 ```bash
-gem install contentful-importer
+gem install wordpress-exporter
 cd galernaya_data_for_import
 
 ```
