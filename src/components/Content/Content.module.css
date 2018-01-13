@@ -15,25 +15,31 @@
 
 .content_centered {
   text-align: center;
+  justify-content: center;
 }
 
 .children {
-  width: 600px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  @media (max-width: 700px) {
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+@media (min-width: 700px) {
+  .children {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 600px;
   }
+}
 
-  @media (min-width: 1250px) {
+@media (min-width: 1250px) {
+  .children {
     width: 800px;
   }
 }
 
 .presentation {
   align-self: stretch;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-content: center;

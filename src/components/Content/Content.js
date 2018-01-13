@@ -6,18 +6,21 @@ import st from './Content.module.css'
 
 export const Content = ({
   children,
+  style,
   className,
   centered,
   presentation,
   inverted,
-}: {
+}: {|
   children: *,
+  style?: Object,
   className?: string,
   centered?: boolean,
   presentation?: React$Element<any>,
   inverted?: boolean,
-}) => (
+|}) => (
   <div
+    style={style}
     className={cn(
       st.content,
       centered && st.content_centered,
