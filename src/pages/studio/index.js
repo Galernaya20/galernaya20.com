@@ -23,12 +23,16 @@ const StudioPage = ({
   studioB,
   liveRecord,
   production,
+  vocalRecord,
+  toolsRecording,
 }: {
   header: {title: string, description: string, src?: string},
   studioA: {title: string, description: string, price: string, link: string},
   studioB: {title: string, description: string, price: string, link: string},
   liveRecord: {title: string, description: string, price: string, videos: string[]},
   production: {title: string, description: string, price: string, link: string},
+  vocalRecord: {title: string, description: string, price: string, link: string},
+  toolsRecording: {title: string, description: string, price: string, link: string},
 }) => (
   <div>
     <Header {...header} />
@@ -64,11 +68,12 @@ const StudioPage = ({
       left={<div>видео</div>}
       right={
         <div>
-          <h2>Запись вокала</h2>
-          <p>Что-то про особенности записи вокала. Для кого, для скольки людей и тп</p>
-          <p>Вам подойдет студия А или Студия Б</p>
-          <p>Стоимость от 600руб</p>
-          <p>Подробности</p>
+          <h2>{vocalRecord.title}</h2>
+          <p>{vocalRecord.description}</p>
+          <p>Стоимость от {vocalRecord.price} в час</p>
+          <p>
+            <a href={vocalRecord.link}>Подробности</a>
+          </p>
         </div>
       }
     />
@@ -78,11 +83,12 @@ const StudioPage = ({
       invert
       left={
         <div>
-          <h2>Запись инструментов</h2>
-          <p>Что-то про особенности записи вокала. Для кого, для скольки людей и тп</p>
-          <p>Вам подойдет студия А или Студия Б</p>
-          <p>Стоимость от 600руб</p>
-          <p>Подробности</p>
+          <h2>{toolsRecording.title}</h2>
+          <p>{toolsRecording.description}</p>
+          <p>Стоимость от {toolsRecording.price} в час</p>
+          <p>
+            <a href={toolsRecording.link}>Подробности</a>
+          </p>
         </div>
       }
       right={<div>видео</div>}

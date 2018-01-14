@@ -51,6 +51,20 @@ export const studioData = {
     price: '390',
     link: 'http://galernaya20.com/',
   },
+  vocalRecord: {
+    title: 'Запись вокала',
+    description:
+      'Что-то про особенности записи вокала. Для кого, для скольки людей и тп   Вам подойдет студия А или Студия Б',
+    price: '540',
+    link: 'http://galernaya20.com/',
+  },
+  toolsRecording: {
+    title: 'Запись инструментов',
+    description:
+      'Что-то про особенности записи вокала. Для кого, для скольки людей и тп   Вам подойдет студия А или Студия Б',
+    price: '320',
+    link: 'http://galernaya20.com/',
+  },
 }
 
 storiesOf('Pages', module)
