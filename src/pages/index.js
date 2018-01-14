@@ -3,10 +3,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../defaultMeta'
+import StudioPage from './studio'
 
+import {studioData} from '../components/pages.stories'
 const IndexPage = () => (
   <div>
-    <h1>Index</h1>
+    <StudioPage {...studioData} />
 
     <Helmet meta={defaultMeta}>
       <title>Галерная 20</title>

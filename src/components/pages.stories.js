@@ -9,7 +9,7 @@ import {Header} from './Header/Header'
 import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
 import {ClientLogos} from './ClientLogos/ClientLogos'
-
+import StudioPage from '../pages/studio'
 const TwoColumnRow = ({left, right, invert, style = {}}: {left: any, right: any, invert?: boolean, style?: Object}) => {
   return (
     <Content
@@ -18,6 +18,39 @@ const TwoColumnRow = ({left, right, invert, style = {}}: {left: any, right: any,
       <Content style={invert ? {...style, backgroundColor: '#ddd'} : style}>{left}</Content>
     </Content>
   )
+}
+export const studioData = {
+  header: {
+    title: 'Студия звукозаписи',
+    description: 'Коротко о том, что это и какие услуги и для кого',
+    src: 'http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4',
+  },
+  studioA: {
+    title: 'Студия А',
+    description:
+      'Подходит для записи вокала записи одного интрумента. Можно делать такие-то вещи, со своим звуковиком и без.',
+    price: '600',
+    link: 'http://galernaya20.com',
+  },
+  studioB: {
+    title: 'Студия Б',
+    description:
+      'Подходит для записи вокала записи одного интрумента. Можно делать такие-то вещи, со своим звуковиком и без.',
+    price: '800',
+    link: 'http://galernaya20.com/',
+  },
+  liveRecord: {
+    title: 'Запись live',
+    description: 'Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части',
+    price: '900',
+    videos: ['FUtrw7GtdfM', 'DcJFdCmN98s'],
+  },
+  production: {
+    title: 'Продакшн',
+    description: 'Коротко о продакшене, кому и зачем',
+    price: '390',
+    link: 'http://galernaya20.com/',
+  },
 }
 
 storiesOf('Pages', module)
@@ -35,76 +68,7 @@ storiesOf('Pages', module)
   .add('studio', () => (
     <div>
       <NavBar />
-      <Header
-        title="Студия звукозаписи"
-        description="Коротко о том, что это и какие услуги и для кого"
-        src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
-      />
-
-      <TwoColumnRow
-        style={{height: 260}}
-        left={
-          <div>
-            <h2>Студия А</h2>
-            <p>
-              Подходит для записи вокала записи одного интрумента. Можно делать такие-то вещи, со своим звуковиком и
-              без.
-            </p>
-            <p>Стоимость от 600руб в час</p>
-            <p> Подробности &gt;</p>
-          </div>
-        }
-        right={
-          <div>
-            <h2>Студия Б</h2>
-            <p>
-              Подходит для записи вокала записи одного интрумента. Можно делать такие-то вещи, со своим звуковиком и
-              без.
-            </p>
-            <p>Стоимость от 800руб в час</p>
-            <p> Подробности &gt;</p>
-          </div>
-        }
-      />
-
-      <ContentWithVideos videoIds={['FUtrw7GtdfM', 'DcJFdCmN98s']}>
-        <h2>Запись live</h2>
-        <p>
-          Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части
-        </p>
-        <p>Стоимость от 600 руб.</p>
-      </ContentWithVideos>
-
-      <ClientLogos />
-
-      <TwoColumnRow
-        style={{height: 260}}
-        left={
-          <div>
-            <h2>Запись вокала</h2>
-            <p>Что-то про особенности записи вокала. Для кого, для скольки людей и тп</p>
-            <p>Вам подойдет студия А или Студия Б</p>
-            <p>Стоимость от 600руб</p>
-            <p>Подробности</p>
-          </div>
-        }
-        right={<div>123</div>}
-      />
-
-      <TwoColumnRow
-        style={{height: 260}}
-        invert
-        left={<div>123</div>}
-        right={
-          <div>
-            <h2>Запись инструментов</h2>
-            <p>Что-то про особенности записи вокала. Для кого, для скольки людей и тп</p>
-            <p>Вам подойдет студия А или Студия Б</p>
-            <p>Стоимость от 600руб</p>
-            <p>Подробности</p>
-          </div>
-        }
-      />
+      <StudioPage {...studioData} />
     </div>
   ))
   .add('education', () => (
