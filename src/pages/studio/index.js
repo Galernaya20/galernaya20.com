@@ -6,16 +6,7 @@ import {Header} from '../../components/Header/Header'
 import {Content} from '../../components/Content/Content'
 import {NavBar} from '../../components/NavBar/NavBar'
 import {ClientLogos} from '../../components/ClientLogos/ClientLogos'
-
-const TwoColumnRow = ({left, right, invert, style = {}}: {left: any, right: any, invert?: boolean, style?: Object}) => {
-  return (
-    <Content
-      centered
-      presentation={<Content style={invert ? style : {...style, backgroundColor: '#ddd'}}>{right}</Content>}>
-      <Content style={invert ? {...style, backgroundColor: '#ddd'} : style}>{left}</Content>
-    </Content>
-  )
-}
+import {TwoColumnRow} from '../../components/TwoColumnRow/TwoColumnRow'
 
 const StudioPage = ({
   header,

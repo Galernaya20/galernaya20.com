@@ -10,15 +10,8 @@ import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
 import {ClientLogos} from './ClientLogos/ClientLogos'
 import StudioPage from '../pages/studio'
-const TwoColumnRow = ({left, right, invert, style = {}}: {left: any, right: any, invert?: boolean, style?: Object}) => {
-  return (
-    <Content
-      centered
-      presentation={<Content style={invert ? style : {...style, backgroundColor: '#ddd'}}>{right}</Content>}>
-      <Content style={invert ? {...style, backgroundColor: '#ddd'} : style}>{left}</Content>
-    </Content>
-  )
-}
+import {TwoColumnRow} from './TwoColumnRow/TwoColumnRow'
+
 export const studioData = {
   header: {
     title: 'Студия звукозаписи',
