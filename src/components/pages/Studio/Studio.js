@@ -1,30 +1,35 @@
 //@flow
 
 import React from 'react'
-import {ContentWithVideos} from '../../components/ContentWithVideos/ContentWithVideos'
-import {Header} from '../../components/Header/Header'
-import {Content} from '../../components/Content/Content'
-import {NavBar} from '../../components/NavBar/NavBar'
-import {ClientLogos} from '../../components/ClientLogos/ClientLogos'
-import {TwoColumnRow} from '../../components/TwoColumnRow/TwoColumnRow'
+import {ContentWithVideos} from '../../ContentWithVideos/ContentWithVideos'
+import {Header} from '../../Header/Header'
+import {Content} from '../../Content/Content'
+import {NavBar} from '../../NavBar/NavBar'
+import {ClientLogos} from '../../ClientLogos/ClientLogos'
+import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
+import studioData from './fixture'
 
-const StudioPage = ({
-  header,
-  studioA,
-  studioB,
-  liveRecord,
-  production,
-  vocalRecord,
-  toolsRecording,
-}: {
+type StudioT = {
   header: {title: string, description: string, src?: string},
-  studioA: {title: string, description: string, price: string, link: string},
-  studioB: {title: string, description: string, price: string, link: string},
+  studioA: {
+    title: string,
+    description: string,
+    price: string,
+    link: string,
+  },
+  studioB: {
+    title: string,
+    description: string,
+    price: string,
+    link: string,
+  },
   liveRecord: {title: string, description: string, price: string, videos: string[]},
   production: {title: string, description: string, price: string, link: string},
   vocalRecord: {title: string, description: string, price: string, link: string},
   toolsRecording: {title: string, description: string, price: string, link: string},
-}) => (
+}
+
+export const Studio = ({header, studioA, studioB, liveRecord, production, vocalRecord, toolsRecording}: StudioT) => (
   <div>
     <Header {...header} />
 
@@ -123,5 +128,3 @@ const StudioPage = ({
     </Content>
   </div>
 )
-
-export default StudioPage

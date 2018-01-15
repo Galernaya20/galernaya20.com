@@ -2,7 +2,7 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {TwoColumnRow} from './TwoColumnRow'
-import {studioData} from '../pages.stories'
+import studioData from '../../components/pages/Studio/fixture'
 
 const {studioA, studioB} = studioData
 
