@@ -10,15 +10,9 @@ import {Content} from './Content/Content'
 import {NavBar} from './NavBar/NavBar'
 import {ClientLogos} from './ClientLogos/ClientLogos'
 import StudioPage from '../pages/studio'
-const TwoColumnRow = ({left, right, invert, style = {}}: {left: any, right: any, invert?: boolean, style?: Object}) => {
-  return (
-    <Content
-      centered
-      presentation={<Content style={invert ? style : {...style, backgroundColor: '#ddd'}}>{right}</Content>}>
-      <Content style={invert ? {...style, backgroundColor: '#ddd'} : style}>{left}</Content>
-    </Content>
-  )
-}
+import {TwoColumnRow} from './TwoColumnRow/TwoColumnRow'
+import SchoolPage from '../pages/school'
+
 export const studioData = {
   header: {
     title: 'Студия звукозаписи',
@@ -67,6 +61,34 @@ export const studioData = {
   },
 }
 
+export const schoolData = {
+  header: {
+    title: 'Образовательные программы',
+    description: 'Курсы лекций про саунд, продюссирование и запись музыки',
+  },
+  selfProduction: {
+    title: 'Самопродюссирование',
+    description: 'Что-то про особенности записи инструментов. Для кого, для скольки людей и т.д.',
+    price: '364',
+    link: 'http://galernaya20.com/',
+    src: 'http://via.placeholder.com/900x900',
+  },
+  recordingAndMixing: {
+    title: 'Запись и сведение',
+    description: 'Что-то про особенности записи инструментов. Для кого, для скольки людей и т.д.',
+    price: '364',
+    link: 'http://galernaya20.com/',
+    src: 'http://via.placeholder.com/900x900',
+  },
+  dj: {
+    title: 'Диджеинг',
+    description: 'Что-то про особенности записи инструментов. Для кого, для скольки людей и т.д.',
+    price: '549',
+    link: 'http://galernaya20.com/',
+    src: 'http://via.placeholder.com/900x900',
+  },
+}
+
 storiesOf('Pages', module)
   .addDecorator(
     contextDecorator({
@@ -85,50 +107,9 @@ storiesOf('Pages', module)
       <StudioPage {...studioData} />
     </div>
   ))
-  .add('education', () => (
+  .add('school', () => (
     <div>
       <NavBar />
-      <Header title="Образовательные программы" description="Курсы лекций про саунд, продюссирование и запись музыки" />
-      <Content presentation={<div>I’m presentation</div>}>
-        <h2>Самопродюссирование</h2>
-        <p>
-          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
-          until it does wrap.
-        </p>
-        <p>
-          <strong>Стоимость от 600 руб.</strong>
-        </p>
-        <p>
-          <a href="#">Подробности</a>
-        </p>
-      </Content>
-
-      <Content presentation={<div>I’m presentation</div>} inverted>
-        <h2>Запись и сведение</h2>
-        <p>
-          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
-          until it does wrap.
-        </p>
-        <p>
-          <strong>Стоимость от 600 руб.</strong>
-        </p>
-        <p>
-          <a href="#">Подробности</a>
-        </p>
-      </Content>
-
-      <Content presentation={<div>I’m presentation</div>}>
-        <h2>Диджеинг</h2>
-        <p>
-          This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again
-          until it does wrap.
-        </p>
-        <p>
-          <strong>Стоимость от 600 руб.</strong>
-        </p>
-        <p>
-          <a href="#">Подробности</a>
-        </p>
-      </Content>
+      <SchoolPage {...schoolData} />
     </div>
   ))
