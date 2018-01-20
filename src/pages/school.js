@@ -1,5 +1,6 @@
 //@flow
 
+import '../globalStyles'
 import React from 'react'
 import {School} from '../components/pages/School/School'
 import schoolData from '../components/pages/School/fixture'

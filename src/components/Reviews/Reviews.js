@@ -2,25 +2,30 @@
 
 import React, {Component} from 'react'
 import cn from 'classnames'
-import st from './Reviews.module.css'
+import styled from 'styled-components'
 
 type PropsT = {
   reviews: Array<{author: string, text: string, photo: string}>,
 }
 
-class Reviews extends Component<PropsT> {
+const Self = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+`
+
+export class Reviews extends Component<PropsT> {
   render() {
     const {reviews} = this.props
     return (
-      <div className={st.reviews}>
+      <Self>
         {reviews.map(review => (
-          <div key={review.author} className={st.review}>
-            <span className={st.author}>{review.author}</span>
+          <div key={review.author}>
+            <span>{review.author}</span>
           </div>
         ))}
-      </div>
+      </Self>
     )
   }
 }
-
-export {Reviews}

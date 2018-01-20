@@ -1,9 +1,0 @@
-{
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "selector-list-comma-newline-after": "always-multi-line",
-    "selector-pseudo-element-colon-notation": "single",
-    "selector-pseudo-class-no-unknown": [true, {"ignorePseudoClasses": ["global"]}],
-    "selector-type-no-unknown": [true, {"ignoreTypes": ["@i"]}]
-  }
-}

@@ -1,5 +1,6 @@
 //@flow
 
+import '../globalStyles'
 import React from 'react'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../defaultMeta'
