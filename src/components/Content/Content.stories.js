@@ -1,4 +1,5 @@
 //@flow
+
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {TestPage} from '../../../.storybook/TestPage'
@@ -53,7 +54,8 @@ storiesOf('Content', module)
             I’m inverted Presentation component
           </Presentation>
         }
-        inverted>
+        inverted
+      >
         <h2>Heading 2</h2>
         <p>
           This is a paragraph of text that should be long enough to wrap. If not, we can repeat it over and over again

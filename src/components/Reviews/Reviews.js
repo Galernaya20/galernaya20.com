@@ -1,7 +1,6 @@
 //@flow
 
 import React, {Component} from 'react'
-import cn from 'classnames'
 import styled from 'styled-components'
 
 type PropsT = {

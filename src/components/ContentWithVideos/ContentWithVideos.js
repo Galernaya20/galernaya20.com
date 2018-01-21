@@ -22,18 +22,6 @@ const VideoContainer = styled.div`
   margin-top: 50px;
 `
 
-const Presentation = styled.div`
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 50%;
-  min-height: 500px;
-  flex-shrink: 1;
-  box-sizing: border-box;
-`
-
 const defaultVideoSize = {
   width: 400,
   height: 250,
@@ -42,7 +30,7 @@ const defaultVideoSize = {
 export const ContentWithVideos = ({
   children,
   videoIds,
-  videoSize,
+  videoSize = defaultVideoSize,
 }: {
   children: React$Element<*>[],
   videoIds: string[],
@@ -54,13 +42,7 @@ export const ContentWithVideos = ({
       <VideoContainer>
         {videoIds.map(videoId => (
           <Video key={videoId}>
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              frameBorder="0"
-              allowFullscreen
-              {...defaultVideoSize}
-              {...videoSize}
-            />
+            <iframe src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullscreen {...videoSize} />
           </Video>
         ))}
       </VideoContainer>

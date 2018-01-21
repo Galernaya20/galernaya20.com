@@ -23,7 +23,7 @@ const LogoImg = styled.img`
   max-height: 100%;
 `
 
-export const ClientLogos = ({className}: {className?: string}) => {
+export const ClientLogos = () => {
   return (
     <Self>
       <Logo>

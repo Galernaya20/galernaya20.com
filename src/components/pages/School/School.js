@@ -3,7 +3,6 @@
 import React from 'react'
 import {Header} from '../../Header/Header'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
-import schoolData from './fixture'
 
 type SchoolT = {
   header: {title: string, description: string},

@@ -1,21 +1,8 @@
 //@flow
 
 import React from 'react'
-import cn from 'classnames'
 import {Content} from '../index'
 
-import {
-  Player,
-  ControlBar,
-  ReplayControl,
-  ForwardControl,
-  CurrentTimeDisplay,
-  TimeDivider,
-  PlaybackRateMenuButton,
-  VolumeMenuButton,
-  BigPlayButton,
-} from 'video-react'
-import 'video-react/dist/video-react.css'
 import styled from 'styled-components'
 
 const Video = styled.div`
@@ -43,12 +30,6 @@ const VideoWrapper = styled.div`
   justify-content: center;
 `
 
-const StyledPlayer = styled(Player)`
-  &:global(.video-react) {
-    height: 100% !important;
-  }
-`
-
 const Description = styled.p`
   margin-top: 30px;
   margin-bottom: 30px;
@@ -65,17 +46,12 @@ const Self = styled.div`
   text-align: center;
 `
 
-export const Header = ({
-  title,
-  description,
-  src,
-  className,
-}: {
-  title: string,
-  description: string,
-  src?: string,
-  className?: string,
-}) => (
+const Iframe = styled.iframe`
+  width: 500px;
+  height: 300px;
+`
+
+export const Header = ({title, description, src}: {title: string, description: string, src?: string}) => (
   <Self>
     <Content>
       <StyledHeader>{title}</StyledHeader>
@@ -83,20 +59,7 @@ export const Header = ({
       {src && (
         <VideoWrapper>
           <Video>
-            <StyledPlayer poster="/assets/poster.png">
-              <source src={src} />
-
-              <BigPlayButton position="center" />
-
-              <ControlBar>
-                <ReplayControl seconds={10} order={1.1} />
-                <ForwardControl seconds={30} order={1.2} />
-                <CurrentTimeDisplay order={4.1} />
-                <TimeDivider order={4.2} />
-                <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
-                <VolumeMenuButton disabled />
-              </ControlBar>
-            </StyledPlayer>
+            <Iframe src={'https://www.youtube.com/embed/FUtrw7GtdfM'} frameBorder="0" allowFullscreen />
           </Video>
         </VideoWrapper>
       )}

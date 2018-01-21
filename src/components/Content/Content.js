@@ -1,7 +1,6 @@
 //@flow
 
 import React from 'react'
-import cn from 'classnames'
 import styled from 'styled-components'
 
 const Self = styled.div`
@@ -21,8 +20,8 @@ const Self = styled.div`
   ${({centered}) => {
     if (centered) {
       return `
-      text-align: center;
-      justify-content: center;
+        text-align: center;
+        justify-content: center;
       `
     }
   }};
@@ -51,8 +50,6 @@ const Presentation = styled.div`
 `
 
 const Children = styled.div`
-
-
   width: auto;
   padding-left: 20px;
   padding-right: 20px;

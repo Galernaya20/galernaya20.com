@@ -4,10 +4,8 @@ import React from 'react'
 import {ContentWithVideos} from '../../ContentWithVideos/ContentWithVideos'
 import {Header} from '../../Header/Header'
 import {Content} from '../../Content/Content'
-import {NavBar} from '../../NavBar/NavBar'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
-import studioData from './fixture'
 
 type StudioT = {
   header: {title: string, description: string, src?: string},
