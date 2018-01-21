@@ -9,6 +9,8 @@ storiesOf('NavBar', module)
     contextDecorator({
       router: {
         history: {
+          push: () => {},
+          replace: () => {},
           isActive: () => false,
           location: {pathname: '', query: {auth: false}},
           createHref: id => id,
