@@ -8,7 +8,6 @@ const {studioA, studioB} = studioData
 
 storiesOf('TwoColumnRow', module).add('default', () => (
   <TwoColumnRow
-    style={{height: 260}}
     left={
       <div>
         <h2>{studioA.title}</h2>

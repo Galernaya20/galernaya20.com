@@ -57,7 +57,6 @@ const MenuList = styled.ul`
     align-items: start;
     background: #eee;
     ${({open}) => {
-      debugger
       if (open) {
         return `display: block;`
       }

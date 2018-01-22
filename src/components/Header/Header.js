@@ -47,8 +47,19 @@ const Self = styled.div`
 `
 
 const Iframe = styled.iframe`
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: 150px;
+  @media screen and (min-width: 576px) {
+    height: 350px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 350px;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 450px;
+  }
 `
 
 export const Header = ({title, description, src}: {title: string, description: string, src?: string}) => (

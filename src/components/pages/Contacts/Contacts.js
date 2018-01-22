@@ -1,13 +1,17 @@
 //@flow
 
 import React from 'react'
+import {Footer} from '../../Footer/Footer'
 
 export const Contacts = ({html}: {html: string}) => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: html,
-    }}
-  />
+  <div>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: html,
+      }}
+    />
+    <Footer />
+  </div>
 )
 
 const UnwrapPathContextContacts = ({

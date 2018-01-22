@@ -2,6 +2,7 @@
 
 import React from 'react'
 import {Header} from '../../Header/Header'
+import {Footer} from '../../Footer/Footer'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
 
 type SchoolT = {
@@ -15,7 +16,6 @@ export const School = ({header, selfProduction, recordingAndMixing, dj}: SchoolT
   <div>
     <Header {...header} />
     <TwoColumnRow
-      style={{height: 260}}
       left={
         <div>
           <h2>{selfProduction.title}</h2>
@@ -30,7 +30,6 @@ export const School = ({header, selfProduction, recordingAndMixing, dj}: SchoolT
     />
     <TwoColumnRow
       invert
-      style={{height: 260}}
       left={<div>Image or video</div>}
       right={
         <div>
@@ -44,7 +43,6 @@ export const School = ({header, selfProduction, recordingAndMixing, dj}: SchoolT
       }
     />
     <TwoColumnRow
-      style={{height: 260}}
       left={
         <div>
           <h2>{dj.title}</h2>
@@ -57,5 +55,6 @@ export const School = ({header, selfProduction, recordingAndMixing, dj}: SchoolT
       }
       right={<div>Image or video</div>}
     />
+    <Footer />
   </div>
 )
