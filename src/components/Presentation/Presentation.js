@@ -32,7 +32,8 @@ export const Presentation = ({
     style={{
       backgroundColor: background.color,
       backgroundImage: background.image ? `url(${background.image})` : null,
-    }}>
+    }}
+  >
     {children}
   </Self>
 )

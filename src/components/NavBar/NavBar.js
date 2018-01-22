@@ -118,7 +118,7 @@ const Hamburger = styled.div`
 `
 
 export class NavBar extends Component<{}, {isOpen: boolean}> {
-  constructor(props) {
+  constructor(props: *) {
     super(props)
 
     this.state = {

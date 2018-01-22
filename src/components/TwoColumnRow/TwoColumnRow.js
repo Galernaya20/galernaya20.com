@@ -16,7 +16,8 @@ export const TwoColumnRow = ({
   return (
     <Content
       centered
-      presentation={<Content style={invert ? style : {...style, backgroundColor: '#ddd'}}>{right}</Content>}>
+      presentation={<Content style={invert ? style : {...style, backgroundColor: '#ddd'}}>{right}</Content>}
+    >
       <Content style={invert ? {...style, backgroundColor: '#ddd'} : style}>{left}</Content>
     </Content>
   )
