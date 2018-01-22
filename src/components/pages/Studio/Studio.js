@@ -6,6 +6,7 @@ import {Header} from '../../Header/Header'
 import {Content} from '../../Content/Content'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
+import {Footer} from '../../Footer/Footer'
 
 type StudioT = {
   header: {title: string, description: string, src?: string},
@@ -32,7 +33,6 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
     <Header {...header} />
 
     <TwoColumnRow
-      style={{height: 260}}
       left={
         <div>
           <h2>{studioA.title}</h2>
@@ -58,7 +58,6 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
     <ClientLogos />
 
     <TwoColumnRow
-      style={{height: 260}}
       left={<div>видео</div>}
       right={
         <div>
@@ -73,7 +72,6 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
     />
 
     <TwoColumnRow
-      style={{height: 260}}
       invert
       left={
         <div>
@@ -88,14 +86,15 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
       right={<div>видео</div>}
     />
 
-    <ContentWithVideos videoIds={liveRecord.videos}>
-      <h2>{liveRecord.title}</h2>
-      <p>{liveRecord.description}</p>
-      <p>Стоимость от {liveRecord.price} руб.</p>
-    </ContentWithVideos>
+    {false && (
+      <ContentWithVideos videoIds={liveRecord.videos}>
+        <h2>{liveRecord.title}</h2>
+        <p>{liveRecord.description}</p>
+        <p>Стоимость от {liveRecord.price} руб.</p>
+      </ContentWithVideos>
+    )}
 
     <TwoColumnRow
-      style={{height: 260}}
       left={
         <div>
           <h2>{production.title}</h2>
@@ -124,5 +123,6 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
     <Content>
       <div>Компонент Как с нами связяться</div>
     </Content>
+    <Footer />
   </div>
 )
