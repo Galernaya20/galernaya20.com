@@ -34,6 +34,20 @@ const Menu = styled.ul`
   letter-spacing: 0.04em;
   list-style-type: none;
   margin: 0;
+  padding: 0;
+  height: 100%;
+  @media screen and (max-width: 1000px) {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    background: #eee;
+    ${({open}) => {
+      if (open) {
+        return `display: block;`
+      }
+    }};
+  }
 `
 
 const Contacts = styled.div`
