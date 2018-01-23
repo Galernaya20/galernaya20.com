@@ -13,7 +13,7 @@ const SelfInner = styled.div`
   margin: 0 auto;
   height: 100%;
 `
-
+//test ci
 export const Container = ({children, className, style}: {children: *, style?: Object, className?: string}) => (
   <Self className={className} style={style}>
     <SelfInner>{children}</SelfInner>
