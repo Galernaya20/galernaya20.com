@@ -63,16 +63,16 @@ const RightArrow = styled.div`
   right: 0;
 `
 
-export class Reviews extends Component<PropsT> {
+export class Reviews extends Component<PropsT, {activeIndex: number}> {
   state = {
     activeIndex: 0,
   }
-  goToSlide(index) {
+  goToSlide(index: number) {
     this.setState({
       activeIndex: index,
     })
   }
-  goToPrevSlide(e) {
+  goToPrevSlide(e: any) {
     e.preventDefault()
 
     let index = this.state.activeIndex
@@ -90,7 +90,7 @@ export class Reviews extends Component<PropsT> {
     })
   }
 
-  goToNextSlide(e) {
+  goToNextSlide(e: any) {
     e.preventDefault()
     let index = this.state.activeIndex
     const {reviews} = this.props
