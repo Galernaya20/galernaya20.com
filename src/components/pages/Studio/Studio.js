@@ -7,6 +7,13 @@ import {Content} from '../../Content/Content'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
 import {Footer} from '../../Footer/Footer'
+import {Reviews} from '../../Reviews/Reviews'
+
+type ReviewT = {
+  text: string,
+  author: string,
+  photo: string,
+}
 
 type StudioT = {
   header: {title: string, description: string, src?: string},
@@ -26,9 +33,19 @@ type StudioT = {
   production: {title: string, description: string, price: string, link: string},
   vocalRecord: {title: string, description: string, price: string, link: string},
   toolsRecording: {title: string, description: string, price: string, link: string},
+  reviews: Array<ReviewT>,
 }
 
-export const Studio = ({header, studioA, studioB, liveRecord, production, vocalRecord, toolsRecording}: StudioT) => (
+export const Studio = ({
+  header,
+  studioA,
+  studioB,
+  liveRecord,
+  production,
+  vocalRecord,
+  toolsRecording,
+  reviews,
+}: StudioT) => (
   <div>
     <Header {...header} />
 
@@ -117,7 +134,7 @@ export const Studio = ({header, studioA, studioB, liveRecord, production, vocalR
     />
 
     <Content>
-      <div>Компонетн Слайдер </div>
+      <Reviews reviews={reviews} />
     </Content>
 
     <Content>
