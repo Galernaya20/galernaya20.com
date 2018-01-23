@@ -1,12 +1,15 @@
 //@flow
 
+import '../globalStyles'
 import React from 'react'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../defaultMeta'
+import {Studio} from '../components/pages/Studio/Studio'
+import studioData from '../components/pages/Studio/fixture'
 
 const IndexPage = () => (
   <div>
-    <h1>Index</h1>
+    <Studio {...studioData} />
 
     <Helmet meta={defaultMeta}>
       <title>Галерная 20</title>

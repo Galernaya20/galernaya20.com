@@ -1,27 +1,46 @@
 //@flow
 
 import React from 'react'
-import cn from 'classnames'
-import st from './ClientLogos.module.css'
+import styled from 'styled-components'
 
-export const ClientLogos = ({className}: {className?: string}) => {
+const Self = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #353535;
+  flex-wrap: wrap;
+`
+
+const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+`
+
+const LogoImg = styled.img`
+  width: auto;
+  max-height: 100%;
+`
+
+export const ClientLogos = () => {
   return (
-    <div className={cn(st.self, className)}>
-      <div className={st.logo}>
-        <img className={st.logoImg} src="http://placehold.it/150x50" />
-      </div>
-      <div className={st.logo}>
-        <img className={st.logoImg} src="http://placehold.it/150x70" />
-      </div>
-      <div className={st.logo}>
-        <img className={st.logoImg} src="http://placehold.it/150x30" />
-      </div>
-      <div className={st.logo}>
-        <img className={st.logoImg} src="http://placehold.it/150x80" />
-      </div>
-      <div className={st.logo}>
-        <img className={st.logoImg} src="http://placehold.it/150x50" />
-      </div>
-    </div>
+    <Self>
+      <Logo>
+        <LogoImg src="http://placehold.it/150x50" />
+      </Logo>
+      <Logo>
+        <LogoImg src="http://placehold.it/150x70" />
+      </Logo>
+      <Logo>
+        <LogoImg src="http://placehold.it/150x30" />
+      </Logo>
+      <Logo>
+        <LogoImg src="http://placehold.it/150x80" />
+      </Logo>
+      <Logo>
+        <LogoImg src="http://placehold.it/150x50" />
+      </Logo>
+    </Self>
   )
 }

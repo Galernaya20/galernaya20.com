@@ -1,9 +1,9 @@
 /* eslint max-len: off */
 import React from 'react'
-import {SVG} from '../SVG/SVG'
+import {Svg} from '../Svg/Svg'
 
 export const CloseIcon = ({className}) => (
-  <SVG width="17" height="17" className={className}>
+  <Svg width="17" height="17" className={className}>
     <path d="M8.5 6.38l-5.659-5.659c-.396-.396-1.022-.39-1.411-.001l-.707.707c-.393.393-.389 1.021.001 1.411l5.659 5.659-5.659 5.659c-.39.39-.394 1.019-.001 1.411l.707.707c.39.39 1.015.395 1.411-.001l5.659-5.659 5.659 5.659c.396.396 1.022.39 1.411.001l.707-.707c.393-.393.389-1.021-.001-1.411l-5.659-5.659 5.659-5.659c.39-.39.394-1.019.001-1.411l-.707-.707c-.39-.39-1.015-.395-1.411.001l-5.659 5.659z" />
-  </SVG>
+  </Svg>
 )

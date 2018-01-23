@@ -13,35 +13,7 @@ const program = {
 module.exports = function customiseStorybookConfig(storybookBaseConfig) {
   return Object.assign({}, storybookBaseConfig, {
     module: {
-      rules: [
-        ...storybookBaseConfig.module.rules,
-        {
-          test: /^((?!\.module).)*css$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [cssnext()],
-              },
-            },
-          ],
-        },
-        {
-          test: /\.module.css$/,
-          use: [
-            'style-loader',
-            'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [cssnext()],
-              },
-            },
-          ],
-        },
-      ],
+      rules: [...storybookBaseConfig.module.rules],
     },
   })
 }

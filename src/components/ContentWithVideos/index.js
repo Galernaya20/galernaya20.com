@@ -1,2 +1,3 @@
-export {default} from './ContentWithVideos'
+//@flow
+
 export * from './ContentWithVideos'

@@ -1,16 +1,18 @@
 //@flow
+
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import {NavBar} from './NavBar.js'
-import {contextDecorator} from '../../../stories/decorators'
+import {contextDecorator} from '../../../../stories/decorators'
+import {NavBar} from '../../NavBar/NavBar'
 
-storiesOf('NavBar', module)
+import {School} from './School'
+import schoolData from './fixture'
+
+storiesOf('Pages', module)
   .addDecorator(
     contextDecorator({
       router: {
         history: {
-          push: () => {},
-          replace: () => {},
           isActive: () => false,
           location: {pathname: '', query: {auth: false}},
           createHref: id => id,
@@ -18,4 +20,9 @@ storiesOf('NavBar', module)
       },
     }),
   )
-  .add('NavBar', () => <NavBar />)
+  .add('School', () => (
+    <div>
+      <NavBar />
+      <School {...schoolData} />
+    </div>
+  ))
