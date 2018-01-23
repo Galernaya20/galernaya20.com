@@ -19,8 +19,8 @@ export const RoContentTitle = ({content, title}: {content: string, title?: strin
   </div>
 )
 
-const UnwrapPathContext = ({pageResources: {json: {pathContext}}}: {pageResources: {json: {pathContext: Object}}}) => (
-  <RoContentTitle {...pathContext} />
-)
+const UnwrapPathContext = ({pathContext}: *) => {
+  return <RoContentTitle {...pathContext} />
+}
 
 export default UnwrapPathContext
