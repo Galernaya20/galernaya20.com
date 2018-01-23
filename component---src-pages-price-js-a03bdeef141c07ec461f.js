@@ -1,0 +1,2 @@
+webpackJsonp([0x6deeed01cac7],{239:function(e,t,u){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0,u(28);var n=u(1),a=l(n),c=function(){return a.default.createElement("div",null,a.default.createElement("h1",null,"Price"))};t.default=c,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-price-js-a03bdeef141c07ec461f.js.map
