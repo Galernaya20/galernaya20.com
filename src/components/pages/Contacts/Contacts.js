@@ -14,10 +14,8 @@ export const Contacts = ({html}: {html: string}) => (
   </div>
 )
 
-const UnwrapPathContextContacts = ({
-  pageResources: {json: {pathContext}},
-}: {
-  pageResources: {json: {pathContext: Object}},
-}) => <Contacts {...pathContext} />
+const UnwrapPathContextContacts = ({pathContext}) => {
+  return <Contacts {...pathContext} />
+}
 
 export default UnwrapPathContextContacts
