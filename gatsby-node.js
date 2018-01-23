@@ -3,7 +3,7 @@
 const path = require('path')
 const slash = require('slash')
 
-const RoContentTitle = path.resolve(process.cwd(), 'src/components/pages/RoContentTitle/RoContentTitle.js')
+const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -56,7 +56,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
 
   createPage({
     path: '/contacts',
-    component: slash(RoContentTitle),
+    component: slash(RawContentTitle),
     context: {
       title: contactsResult.data.allContentfulPost.edges[0].node.title.title,
       content: contactsResult.data.allContentfulPost.edges[0].node.content.content,
@@ -65,7 +65,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
 
   createPage({
     path: '/training',
-    component: slash(RoContentTitle),
+    component: slash(RawContentTitle),
     context: {
       title: trainingResult.data.allContentfulPost.edges[0].node.title.title,
       content: trainingResult.data.allContentfulPost.edges[0].node.content.content,

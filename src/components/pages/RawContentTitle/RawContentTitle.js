@@ -5,7 +5,7 @@ import {Footer} from '../../Footer/Footer'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
 
-export const RoContentTitle = ({content, title}: {content: string, title?: string}) => (
+export const RawContentTitle = ({content, title}: {content: string, title?: string}) => (
   <div>
     <div
       dangerouslySetInnerHTML={{
@@ -20,7 +20,7 @@ export const RoContentTitle = ({content, title}: {content: string, title?: strin
 )
 
 const UnwrapPathContext = ({pathContext}: *) => {
-  return <RoContentTitle {...pathContext} />
+  return <RawContentTitle {...pathContext} />
 }
 
 export default UnwrapPathContext
