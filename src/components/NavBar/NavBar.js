@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import {HamburgerIcon} from '../icons/HamburgerIcon'
 import ClickOutside from 'react-click-outside'
+import {Container} from '../Container/Container'
 
 const MenuItem = styled.li`
   .menuItem {
@@ -87,8 +88,6 @@ const WrapperNav = styled.nav`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 960px;
-  margin: auto;
 `
 
 const Header = styled.div`
@@ -150,46 +149,48 @@ export class NavBar extends Component<{}, {isOpen: boolean}> {
   render() {
     return (
       <Header>
-        <WrapperNav>
-          <MenuClickOutside onClickOutside={this.closeMenu}>
-            <Hamburger onClick={this.toggleMenu}>
-              <HamburgerIcon />
-            </Hamburger>
+        <Container>
+          <WrapperNav>
+            <MenuClickOutside onClickOutside={this.closeMenu}>
+              <Hamburger onClick={this.toggleMenu}>
+                <HamburgerIcon />
+              </Hamburger>
 
-            <MenuList open={this.state.isOpen}>
-              <MenuItem>
-                <Link to="/">Студия</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/production">Продакшн</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/equipment">Оборудование</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/school">Школа</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/team">Команда</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/price">Цены</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/contacts">Контакты</Link>
-              </MenuItem>
-            </MenuList>
-          </MenuClickOutside>
+              <MenuList open={this.state.isOpen}>
+                <MenuItem>
+                  <Link to="/">Студия</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/production">Продакшн</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/equipment">Оборудование</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/school">Школа</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/team">Команда</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/price">Цены</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link to="/contacts">Контакты</Link>
+                </MenuItem>
+              </MenuList>
+            </MenuClickOutside>
 
-          <StyledLink to="/">
-            <LogoImg
-              src="http://via.placeholder.com/150x50"
-              alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
-            />
-          </StyledLink>
+            <StyledLink to="/">
+              <LogoImg
+                src="http://via.placeholder.com/150x50"
+                alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
+              />
+            </StyledLink>
 
-          <Contacts>8 (812) 994 54 97</Contacts>
-        </WrapperNav>
+            <Contacts>8 (812) 994 54 97</Contacts>
+          </WrapperNav>
+        </Container>
       </Header>
     )
   }
