@@ -27,19 +27,19 @@ export const ClientLogos = () => {
   return (
     <Self>
       <Logo>
-        <LogoImg src="http://placehold.it/150x50" />
+        <LogoImg src="https://placehold.it/150x50" />
       </Logo>
       <Logo>
-        <LogoImg src="http://placehold.it/150x70" />
+        <LogoImg src="https://placehold.it/150x70" />
       </Logo>
       <Logo>
-        <LogoImg src="http://placehold.it/150x30" />
+        <LogoImg src="https://placehold.it/150x30" />
       </Logo>
       <Logo>
-        <LogoImg src="http://placehold.it/150x80" />
+        <LogoImg src="https://placehold.it/150x80" />
       </Logo>
       <Logo>
-        <LogoImg src="http://placehold.it/150x50" />
+        <LogoImg src="https://placehold.it/150x50" />
       </Logo>
     </Self>
   )

@@ -183,7 +183,7 @@ export class NavBar extends Component<{}, {isOpen: boolean}> {
 
             <StyledLink to="/">
               <LogoImg
-                src="http://via.placeholder.com/150x50"
+                src="https://via.placeholder.com/150x50"
                 alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
               />
             </StyledLink>
