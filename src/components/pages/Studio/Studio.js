@@ -146,3 +146,9 @@ export const Studio = ({
     <Footer />
   </div>
 )
+
+const UnwrapPathContext = ({pathContext}: *) => {
+  return <Studio {...pathContext} />
+}
+
+export default UnwrapPathContext

@@ -1,6 +1,6 @@
 //@flow
 
-export default {
+module.exports = {
   header: {
     title: 'Студия звукозаписи',
     description: {description: 'Коротко о том, что это и какие услуги и для кого'},

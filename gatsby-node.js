@@ -4,7 +4,7 @@ const path = require('path')
 const slash = require('slash')
 
 const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
-const Page = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/Page.js')
+const Studio = path.resolve(process.cwd(), 'src/components/pages/Studio/Studio.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -95,14 +95,17 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
 
   const studioData = require('./src/components/pages/Studio/fixture')
 
-  studioData
+  console.log(
+    Object.assign({}, studioData, {
+      header: studioResults.data.contentfulPage.header,
+    }),
+  )
   createPage({
     path: '/',
-    component: slash(Page),
-    context: {
-      ...studioData,
+    component: slash(Studio),
+    context: Object.assign({}, studioData, {
       header: studioResults.data.contentfulPage.header,
-    },
+    }),
   })
   return Promise.resolve()
 }
