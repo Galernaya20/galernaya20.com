@@ -51,6 +51,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     `
       {
         contentfulPage {
+          title
           header {
             title
             description {
@@ -60,6 +61,17 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
               type
               src {
                 src
+              }
+            }
+          }
+          review {
+            name
+            description {
+              description
+            }
+            image {
+              file {
+                url
               }
             }
           }
@@ -100,6 +112,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     component: slash(Studio),
     context: Object.assign({}, studioData, {
       header: studioResults.data.contentfulPage.header,
+      reviews: studioResults.data.contentfulPage.review,
     }),
   })
   return Promise.resolve()
