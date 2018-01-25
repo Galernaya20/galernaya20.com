@@ -95,11 +95,6 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
 
   const studioData = require('./src/components/pages/Studio/fixture')
 
-  console.log(
-    Object.assign({}, studioData, {
-      header: studioResults.data.contentfulPage.header,
-    }),
-  )
   createPage({
     path: '/',
     component: slash(Studio),
