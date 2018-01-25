@@ -2,11 +2,12 @@
 
 import React from 'react'
 import {Header} from '../../Header/Header'
+import type {PropsT as HeaderT} from '../../Header/Header'
 import {Footer} from '../../Footer/Footer'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
 
 type SchoolT = {
-  header: {title: string, description: string},
+  header: HeaderT,
   selfProduction: {title: string, description: string, price: string, link: string, src: string},
   recordingAndMixing: {title: string, description: string, price: string, link: string, src: string},
   dj: {title: string, description: string, price: string, link: string, src: string},

@@ -92,10 +92,15 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       content: trainingResult.data.allContentfulPost.edges[0].node.content.content,
     },
   })
+
+  const studioData = require('./src/components/pages/Studio/fixture')
+
+  studioData
   createPage({
-    path: '/studio',
+    path: '/',
     component: slash(Page),
     context: {
+      ...studioData,
       header: studioResults.data.contentfulPage.header,
     },
   })

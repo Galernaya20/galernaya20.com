@@ -3,7 +3,7 @@
 export default {
   header: {
     title: 'Студия звукозаписи',
-    description: 'Коротко о том, что это и какие услуги и для кого',
+    description: {description: 'Коротко о том, что это и какие услуги и для кого'},
     src: 'https://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4',
   },
   studioA: {

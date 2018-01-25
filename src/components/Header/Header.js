@@ -62,7 +62,13 @@ const Iframe = styled.iframe`
   }
 `
 
-export const Header = ({title, description, media}: {title: string, description: Object, media: Object}) => (
+export type PropsT = {
+  title: string,
+  description: {description: string},
+  media?: {src: {src: string}},
+}
+
+export const Header = ({title, description, media}: PropsT) => (
   <Self>
     <Content>
       <StyledHeader>{title}</StyledHeader>

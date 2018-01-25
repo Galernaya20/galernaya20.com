@@ -3,11 +3,14 @@
 import React from 'react'
 import {ContentWithVideos} from '../../ContentWithVideos/ContentWithVideos'
 import {Header} from '../../Header/Header'
+import type {PropsT as HeaderT} from '../../Header/Header'
 import {Content} from '../../Content/Content'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
 import {Footer} from '../../Footer/Footer'
 import {Reviews} from '../../Reviews/Reviews'
+import Helmet from 'react-helmet'
+import {defaultMeta} from '../../../defaultMeta'
 
 type ReviewT = {
   text: string,
@@ -16,7 +19,7 @@ type ReviewT = {
 }
 
 type StudioT = {
-  header: {title: string, description: string, src?: string},
+  header: HeaderT,
   studioA: {
     title: string,
     description: string,
@@ -47,6 +50,9 @@ export const Studio = ({
   reviews,
 }: StudioT) => (
   <div>
+    <Helmet meta={defaultMeta}>
+      <title>Галерная 20</title>
+    </Helmet>
     <Header {...header} />
 
     <TwoColumnRow
