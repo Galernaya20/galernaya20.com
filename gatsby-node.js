@@ -4,6 +4,7 @@ const path = require('path')
 const slash = require('slash')
 
 const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
+const Page = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/Page.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -46,6 +47,26 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       }
     `,
   )
+  const studioResults = await graphql(
+    `
+      {
+        contentfulPage {
+          header {
+            title
+            description {
+              description
+            }
+            media {
+              type
+              src {
+                src
+              }
+            }
+          }
+        }
+      }
+    `,
+  )
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -71,6 +92,12 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       content: trainingResult.data.allContentfulPost.edges[0].node.content.content,
     },
   })
-
+  createPage({
+    path: '/studio',
+    component: slash(Page),
+    context: {
+      header: studioResults.data.contentfulPage.header,
+    },
+  })
   return Promise.resolve()
 }
