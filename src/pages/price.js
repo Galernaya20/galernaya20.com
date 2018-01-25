@@ -2,11 +2,9 @@
 
 import '../globalStyles'
 import React from 'react'
+import {Prices} from '../components/pages/Prices/Prices'
+import pricesData from '../components/pages/Prices/fixture'
 
-const PricePage = () => (
-  <div>
-    <h1>Price</h1>
-  </div>
-)
+const PricePage = () => <Prices {...pricesData} />
 
 export default PricePage
