@@ -5,8 +5,18 @@ import styled from 'styled-components'
 import {LeftArrowIcon} from '../icons/LeftArrowIcon'
 import {RightArrowIcon} from '../icons/RightArrowIcon'
 
-type PropsT = {
-  reviews: Array<{author: string, text: string, photo: string}>,
+export type PropsT = {
+  reviews: Array<{
+    name: string,
+    description: {
+      description: string,
+    },
+    image: {
+      file: {
+        url: string,
+      },
+    },
+  }>,
 }
 
 const ReviewsContainer = styled.div`
@@ -123,13 +133,13 @@ export class Reviews extends Component<PropsT, {activeIndex: number}> {
         ) : null}
 
         {reviews.map((review, index) => (
-          <Review index={index} activeIndex={activeIndex} key={review.author}>
+          <Review index={index} activeIndex={activeIndex} key={index}>
             <AuthorPicture>
-              <img src={review.photo} width="160" />
+              <img src={review.image.file.url} width="160" />
             </AuthorPicture>
             <Content>
-              <Text>&ldquo;{review.text}&rdquo;</Text>
-              <Author>{review.author}</Author>
+              <Text>&ldquo;{review.description.description}&rdquo;</Text>
+              <Author>{review.name}</Author>
             </Content>
           </Review>
         ))}

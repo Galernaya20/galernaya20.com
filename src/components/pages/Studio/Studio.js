@@ -9,14 +9,9 @@ import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
 import {Footer} from '../../Footer/Footer'
 import {Reviews} from '../../Reviews/Reviews'
+import type {PropsT as ReviewsT} from '../../Reviews/Reviews'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
-
-type ReviewT = {
-  text: string,
-  author: string,
-  photo: string,
-}
 
 type StudioT = {
   header: HeaderT,
@@ -36,8 +31,7 @@ type StudioT = {
   production: {title: string, description: string, price: string, link: string},
   vocalRecord: {title: string, description: string, price: string, link: string},
   toolsRecording: {title: string, description: string, price: string, link: string},
-  reviews: Array<ReviewT>,
-}
+} & ReviewsT
 
 export const Studio = ({
   header,
