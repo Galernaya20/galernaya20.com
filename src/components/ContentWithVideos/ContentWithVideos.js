@@ -29,22 +29,25 @@ const defaultVideoSize = {
 
 export const ContentWithVideos = ({
   children,
-  videoIds,
+  videoLeft,
+  videoRight,
   videoSize = defaultVideoSize,
 }: {
   children: React$Element<*>[],
-  videoIds: string[],
+  videoLeft: string,
+  videoRight: string,
   videoSize?: {width: number, height: number},
 }) => (
   <Content centered>
     <Container>
       {children}
       <VideoContainer>
-        {videoIds.map(videoId => (
-          <Video key={videoId}>
-            <iframe src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullscreen {...videoSize} />
-          </Video>
-        ))}
+        <Video>
+          <iframe src={videoLeft} frameBorder="0" allowFullScreen {...videoSize} />
+        </Video>
+        <Video>
+          <iframe src={videoRight} frameBorder="0" allowFullScreen {...videoSize} />
+        </Video>
       </VideoContainer>
     </Container>
   </Content>

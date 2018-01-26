@@ -117,6 +117,15 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
               iframe
             }
           }
+          liveRecord {
+            title
+            price
+            description {
+              description
+            }
+            videoLeft
+            videoRight
+          }
         }
       }
     `,
@@ -162,6 +171,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       production: studioResults.data.contentfulStudioPage.production,
       navigations: studioResults.data.contentfulStudioPage.navigation,
       soundCloud: studioResults.data.contentfulStudioPage.soundCloud,
+      liveRecord: studioResults.data.contentfulStudioPage.liveRecord,
     }),
   })
   return Promise.resolve()

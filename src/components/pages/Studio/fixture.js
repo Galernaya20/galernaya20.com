@@ -22,9 +22,11 @@ module.exports = {
   },
   liveRecord: {
     title: 'Запись live',
-    description: 'Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части',
-    price: '900',
-    videos: ['FUtrw7GtdfM', 'DcJFdCmN98s'],
+    description: {
+      description: 'Мы можем записать как вы записываетесь <br />И прочие интересные моменты этой части',
+    },
+    videoLeft: 'https://www.youtube.com/embed/FUtrw7GtdfM',
+    videoRight: 'https://www.youtube.com/embed/DcJFdCmN98s',
   },
   production: {
     title: 'Продакшн',

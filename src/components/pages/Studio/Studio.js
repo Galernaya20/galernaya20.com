@@ -29,7 +29,7 @@ type StudioT = {
   logos: LogosT,
   studioA: InfoWithPriceT,
   studioB: InfoWithPriceT,
-  liveRecord: {title: string, description: string, price: string, videos: string[]},
+  liveRecord: {title: string, description: {description: string}, price: string, videoLeft: string, videoRight: string},
   production: InfoWithPriceT,
   vocalRecord: InfoWithPriceT,
   toolsRecording: InfoWithPriceT,
@@ -115,13 +115,11 @@ export const Studio = ({
       right={<SoundCloud content={soundCloud[1].iframe.iframe} />}
     />
 
-    {false && (
-      <ContentWithVideos videoIds={liveRecord.videos}>
-        <h2>{liveRecord.title}</h2>
-        <p>{liveRecord.description}</p>
-        <p>Стоимость от {liveRecord.price} руб.</p>
-      </ContentWithVideos>
-    )}
+    <ContentWithVideos videoLeft={liveRecord.videoLeft} videoRight={liveRecord.videoRight}>
+      <h2>{liveRecord.title}</h2>
+      <p>{liveRecord.description.description}</p>
+      <p>Стоимость от {liveRecord.price} руб.</p>
+    </ContentWithVideos>
 
     <TwoColumnRow
       left={
