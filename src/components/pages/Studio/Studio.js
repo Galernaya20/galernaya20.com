@@ -4,6 +4,7 @@ import React from 'react'
 import {ContentWithVideos} from '../../ContentWithVideos/ContentWithVideos'
 import {Header} from '../../Header/Header'
 import type {PropsT as HeaderT} from '../../Header/Header'
+import type {PropsT as LogosT} from '../../ClientLogos/ClientLogos'
 import {Content} from '../../Content/Content'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
@@ -15,6 +16,7 @@ import {defaultMeta} from '../../../defaultMeta'
 
 type StudioT = {
   header: HeaderT,
+  logos: LogosT,
   studioA: {
     title: string,
     description: string,
@@ -35,6 +37,7 @@ type StudioT = {
 
 export const Studio = ({
   header,
+  logos,
   studioA,
   studioB,
   liveRecord,
@@ -72,7 +75,7 @@ export const Studio = ({
       }
     />
 
-    <ClientLogos />
+    <ClientLogos logos={logos} />
 
     <TwoColumnRow
       left={<div>видео</div>}
