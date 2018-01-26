@@ -15,6 +15,7 @@ import type {PropsT as ReviewsT} from '../../Reviews/Reviews'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
 import {Navigation} from '../../Navigation/Navigation'
+import {SoundCloud} from '../../SoundCloud/SoundCloud'
 
 type InfoWithPriceT = {
   title: string,
@@ -33,6 +34,12 @@ type StudioT = {
   vocalRecord: InfoWithPriceT,
   toolsRecording: InfoWithPriceT,
   navigations: NavigationT,
+  soundCloud: Array<{
+    title: string,
+    iframe: {
+      iframe: string,
+    },
+  }>,
 } & ReviewsT
 
 export const Studio = ({
@@ -46,6 +53,7 @@ export const Studio = ({
   toolsRecording,
   reviews,
   navigations,
+  soundCloud,
 }: StudioT) => (
   <div>
     <Helmet meta={defaultMeta}>
@@ -79,7 +87,7 @@ export const Studio = ({
     <ClientLogos logos={logos} />
 
     <TwoColumnRow
-      left={<div>видео</div>}
+      left={<SoundCloud content={soundCloud[0].iframe.iframe} />}
       right={
         <div>
           <h2>{vocalRecord.title}</h2>
@@ -104,7 +112,7 @@ export const Studio = ({
           </p>
         </div>
       }
-      right={<div>видео</div>}
+      right={<SoundCloud content={soundCloud[0].iframe.iframe} />}
     />
 
     {false && (

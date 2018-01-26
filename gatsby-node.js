@@ -111,6 +111,12 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
             title
             link
           }
+          soundCloud {
+            title
+            iframe {
+              iframe
+            }
+          }
         }
       }
     `,
@@ -155,6 +161,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       toolsRecording: studioResults.data.contentfulStudioPage.toolsRecording,
       production: studioResults.data.contentfulStudioPage.production,
       navigations: studioResults.data.contentfulStudioPage.navigation,
+      soundCloud: studioResults.data.contentfulStudioPage.soundCloud,
     }),
   })
   return Promise.resolve()
