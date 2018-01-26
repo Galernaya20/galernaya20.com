@@ -5,6 +5,7 @@ import {ContentWithVideos} from '../../ContentWithVideos/ContentWithVideos'
 import {Header} from '../../Header/Header'
 import type {PropsT as HeaderT} from '../../Header/Header'
 import type {PropsT as LogosT} from '../../ClientLogos/ClientLogos'
+import type {PropsT as NavigationT} from '../../Navigation/Navigation'
 import {Content} from '../../Content/Content'
 import {ClientLogos} from '../../ClientLogos/ClientLogos'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
@@ -13,6 +14,7 @@ import {Reviews} from '../../Reviews/Reviews'
 import type {PropsT as ReviewsT} from '../../Reviews/Reviews'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
+import {Navigation} from '../../Navigation/Navigation'
 
 type InfoWithPriceT = {
   title: string,
@@ -30,6 +32,7 @@ type StudioT = {
   production: InfoWithPriceT,
   vocalRecord: InfoWithPriceT,
   toolsRecording: InfoWithPriceT,
+  navigations: NavigationT,
 } & ReviewsT
 
 export const Studio = ({
@@ -42,6 +45,7 @@ export const Studio = ({
   vocalRecord,
   toolsRecording,
   reviews,
+  navigations,
 }: StudioT) => (
   <div>
     <Helmet meta={defaultMeta}>
@@ -122,15 +126,7 @@ export const Studio = ({
           </p>
         </div>
       }
-      right={
-        <div>
-          <p>Аранжировка</p>
-          <p>Сведение</p>
-          <p>Мастеринг</p>
-          <p>Монтаж</p>
-          <p>Битмейкинг</p>
-        </div>
-      }
+      right={<Navigation navigations={navigations} />}
     />
 
     <Content>

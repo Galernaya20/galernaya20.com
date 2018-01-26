@@ -107,6 +107,10 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
           production {
             ...InfoWithPrice
           }
+          navigation {
+            title
+            link
+          }
         }
       }
     `,
@@ -150,6 +154,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       vocalRecord: studioResults.data.contentfulStudioPage.vocalRecord,
       toolsRecording: studioResults.data.contentfulStudioPage.toolsRecording,
       production: studioResults.data.contentfulStudioPage.production,
+      navigations: studioResults.data.contentfulStudioPage.navigation,
     }),
   })
   return Promise.resolve()

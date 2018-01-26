@@ -60,4 +60,46 @@ module.exports = {
       },
     },
   ],
+  navigations: [
+    {
+      title: 'Contentful-Аранжировка',
+      link: 'https://galernaya20.com/arangirovka',
+    },
+    {
+      title: 'Сведение',
+      link: 'https://galernaya20.com/svedenie',
+    },
+    {
+      title: 'Мастеринг',
+      link: 'https://galernaya20.com/mastering',
+    },
+    {
+      title: 'Монтаж',
+      link: 'https://galernaya20.com/montage',
+    },
+    {
+      title: 'Битмейкинг',
+      link: 'https://galernaya20.com/bitmeiking',
+    },
+  ],
+  logo: [
+    {
+      title: 'Yota',
+      image: {
+        file: {
+          url:
+            '//images.contentful.com/vx768p4z763o/attachment_post_1554/2eba164abca22ba09f59f807ecf256b2/attachment_post_1554',
+        },
+      },
+    },
+    {
+      title: 'Dogs of passion',
+      image: {
+        file: {
+          url:
+            '//images.contentful.com/vx768p4z763o/attachment_post_1553/7d8a14d8dfac78b25febbfbe57f56e19/attachment_post_1553',
+        },
+      },
+    },
+  ],
 }
