@@ -137,9 +137,6 @@ export const Studio = ({
       <Reviews reviews={reviews} />
     </Content>
 
-    <Content>
-      <div>Компонент Как с нами связяться</div>
-    </Content>
     <Footer />
   </div>
 )
