@@ -37,8 +37,8 @@ export type PropsT = {
 export const ClientLogos = ({logos}: PropsT) => {
   return (
     <Self>
-      {logos.map(item => (
-        <Logo>
+      {logos.map((item, index) => (
+        <Logo key={index}>
           <LogoImg src={item.image.file.url} />
         </Logo>
       ))}
