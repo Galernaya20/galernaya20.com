@@ -3,14 +3,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SoundContainer = styled.div``
+const SoundContainer = styled.div`
+  width: 100%;
+`
 
 export const SoundCloud = ({content}: {content: string}) => (
-  <SoundContainer>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: content,
-      }}
-    />
-  </SoundContainer>
+  <SoundContainer
+    dangerouslySetInnerHTML={{
+      __html: content,
+    }}
+  />
 )

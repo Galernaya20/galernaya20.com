@@ -1,8 +1,6 @@
 //@flow
 
 import React from 'react'
-import {Content} from '../index'
-
 import styled from 'styled-components'
 
 const Video = styled.div`
@@ -44,6 +42,8 @@ const Self = styled.div`
   background: #353535;
   color: #fff;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `
 
 const Iframe = styled.iframe`
@@ -70,7 +70,7 @@ export type PropsT = {
 
 export const Header = ({title, description, media}: PropsT) => (
   <Self>
-    <Content>
+    <div>
       <StyledHeader>{title}</StyledHeader>
       <Description>{description.description}</Description>
       {media && (
@@ -80,6 +80,6 @@ export const Header = ({title, description, media}: PropsT) => (
           </Video>
         </VideoWrapper>
       )}
-    </Content>
+    </div>
   </Self>
 )

@@ -4,10 +4,11 @@ import React from 'react'
 import {Footer} from '../../Footer/Footer'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
+import {BlockLayout} from '../styles'
 
 export const RawContentTitle = ({content, title}: {content: string, title?: string}) => (
   <div>
-    <div
+    <BlockLayout
       dangerouslySetInnerHTML={{
         __html: content,
       }}

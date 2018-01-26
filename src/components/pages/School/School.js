@@ -5,6 +5,7 @@ import {Header} from '../../Header/Header'
 import type {PropsT as HeaderT} from '../../Header/Header'
 import {Footer} from '../../Footer/Footer'
 import {TwoColumnRow} from '../../TwoColumnRow/TwoColumnRow'
+import {BlockLayout} from '../styles'
 
 type SchoolT = {
   header: HeaderT,
@@ -18,43 +19,43 @@ export const School = ({header, selfProduction, recordingAndMixing, dj}: SchoolT
     <Header {...header} />
     <TwoColumnRow
       left={
-        <div>
+        <BlockLayout>
           <h2>{selfProduction.title}</h2>
           <p>{selfProduction.description}</p>
           <p>Стоимость от {selfProduction.price} в час</p>
           <p>
             <a href={selfProduction.link}>Подробности</a>
           </p>
-        </div>
+        </BlockLayout>
       }
-      right={<div>Image or video</div>}
+      right={<BlockLayout>Image or video</BlockLayout>}
     />
     <TwoColumnRow
       invert
       left={<div>Image or video</div>}
       right={
-        <div>
+        <BlockLayout>
           <h2>{recordingAndMixing.title}</h2>
           <p>{recordingAndMixing.description}</p>
           <p>Стоимость от {recordingAndMixing.price} в час</p>
           <p>
             <a href={recordingAndMixing.link}>Подробности</a>
           </p>
-        </div>
+        </BlockLayout>
       }
     />
     <TwoColumnRow
       left={
-        <div>
+        <BlockLayout>
           <h2>{dj.title}</h2>
           <p>{dj.description}</p>
           <p>Стоимость от {dj.price} в час</p>
           <p>
             <a href={dj.link}>Подробности</a>
           </p>
-        </div>
+        </BlockLayout>
       }
-      right={<div>Image or video</div>}
+      right={<BlockLayout>Image or video</BlockLayout>}
     />
     <Footer />
   </div>

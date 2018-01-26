@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react'
-import {Content} from '../index'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -38,18 +37,15 @@ export const ContentWithVideos = ({
   videoRight: string,
   videoSize?: {width: number, height: number},
 }) => (
-  //
-  <Content centered>
-    <Container>
-      {children}
-      <VideoContainer>
-        <Video>
-          <iframe src={videoLeft} frameBorder="0" allowFullScreen {...videoSize} />
-        </Video>
-        <Video>
-          <iframe src={videoRight} frameBorder="0" allowFullScreen {...videoSize} />
-        </Video>
-      </VideoContainer>
-    </Container>
-  </Content>
+  <Container>
+    {children}
+    <VideoContainer>
+      <Video>
+        <iframe src={videoLeft} frameBorder="0" allowFullScreen {...videoSize} />
+      </Video>
+      <Video>
+        <iframe src={videoRight} frameBorder="0" allowFullScreen {...videoSize} />
+      </Video>
+    </VideoContainer>
+  </Container>
 )

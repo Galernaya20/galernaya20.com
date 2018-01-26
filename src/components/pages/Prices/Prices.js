@@ -3,11 +3,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Header} from '../../Header/Header'
+import type {PropsT as HeaderT} from '../../Header/Header'
 import {Footer} from '../../Footer/Footer'
-import {Content} from '../../Content/Content'
+import {BlockLayout} from '../styles'
 
 type PricesT = {
-  header: {title: string, description: string},
+  header: HeaderT,
   content: string,
 }
 
@@ -18,9 +19,9 @@ const PricesContent = styled.div`
 export const Prices = ({header, content}: PricesT) => (
   <div>
     <Header {...header} />
-    <Content>
+    <BlockLayout>
       <PricesContent dangerouslySetInnerHTML={{__html: content}} />
-    </Content>
+    </BlockLayout>
     <Footer />
   </div>
 )
