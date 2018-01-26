@@ -14,7 +14,7 @@ export const Contacts = ({html}: {html: string}) => (
   </div>
 )
 
-const UnwrapPathContextContacts = ({pathContext}) => {
+const UnwrapPathContextContacts = ({pathContext}: any) => {
   return <Contacts {...pathContext} />
 }
 

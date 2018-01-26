@@ -62,15 +62,21 @@ const Iframe = styled.iframe`
   }
 `
 
-export const Header = ({title, description, src}: {title: string, description: string, src?: string}) => (
+export type PropsT = {
+  title: string,
+  description: {description: string},
+  media?: {src: {src: string}},
+}
+
+export const Header = ({title, description, media}: PropsT) => (
   <Self>
     <Content>
       <StyledHeader>{title}</StyledHeader>
-      <Description>{description}</Description>
-      {src && (
+      <Description>{description.description}</Description>
+      {media && (
         <VideoWrapper>
           <Video>
-            <Iframe src={'https://www.youtube.com/embed/FUtrw7GtdfM'} frameBorder="0" allowFullscreen />
+            <Iframe src={media.src.src} frameBorder="0" allowFullscreen />
           </Video>
         </VideoWrapper>
       )}

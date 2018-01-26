@@ -20,7 +20,7 @@ export const defaultMeta = [
   },
   {
     property: 'og:url',
-    content: 'http://galernaya20.com/',
+    content: 'https://galernaya20.com/',
   },
   {
     name: 'twitter:card',

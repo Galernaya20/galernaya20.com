@@ -19,28 +19,29 @@ const Logo = styled.div`
 `
 
 const LogoImg = styled.img`
+  max-width: 100%;
   width: auto;
-  max-height: 100%;
+  max-height: 100px;
 `
+export type PropsT = {
+  logo: Array<{
+    title: string,
+    image: {
+      file: {
+        url: string,
+      },
+    },
+  }>,
+}
 
-export const ClientLogos = () => {
+export const ClientLogos = ({logo}: PropsT) => {
   return (
     <Self>
-      <Logo>
-        <LogoImg src="http://placehold.it/150x50" />
-      </Logo>
-      <Logo>
-        <LogoImg src="http://placehold.it/150x70" />
-      </Logo>
-      <Logo>
-        <LogoImg src="http://placehold.it/150x30" />
-      </Logo>
-      <Logo>
-        <LogoImg src="http://placehold.it/150x80" />
-      </Logo>
-      <Logo>
-        <LogoImg src="http://placehold.it/150x50" />
-      </Logo>
+      {logo.map((item, index) => (
+        <Logo key={index}>
+          <LogoImg src={item.image.file.url} />
+        </Logo>
+      ))}
     </Self>
   )
 }
