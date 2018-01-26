@@ -112,7 +112,7 @@ export const Studio = ({
           </p>
         </div>
       }
-      right={<SoundCloud content={soundCloud[0].iframe.iframe} />}
+      right={<SoundCloud content={soundCloud[1].iframe.iframe} />}
     />
 
     {false && (
