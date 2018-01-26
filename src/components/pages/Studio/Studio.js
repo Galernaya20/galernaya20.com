@@ -14,25 +14,22 @@ import type {PropsT as ReviewsT} from '../../Reviews/Reviews'
 import Helmet from 'react-helmet'
 import {defaultMeta} from '../../../defaultMeta'
 
+type InfoWithPriceT = {
+  title: string,
+  description: {description: string},
+  price: number,
+  link: string,
+}
+
 type StudioT = {
   header: HeaderT,
   logos: LogosT,
-  studioA: {
-    title: string,
-    description: string,
-    price: string,
-    link: string,
-  },
-  studioB: {
-    title: string,
-    description: string,
-    price: string,
-    link: string,
-  },
+  studioA: InfoWithPriceT,
+  studioB: InfoWithPriceT,
   liveRecord: {title: string, description: string, price: string, videos: string[]},
-  production: {title: string, description: string, price: string, link: string},
-  vocalRecord: {title: string, description: string, price: string, link: string},
-  toolsRecording: {title: string, description: string, price: string, link: string},
+  production: InfoWithPriceT,
+  vocalRecord: InfoWithPriceT,
+  toolsRecording: InfoWithPriceT,
 } & ReviewsT
 
 export const Studio = ({
@@ -56,7 +53,7 @@ export const Studio = ({
       left={
         <div>
           <h2>{studioA.title}</h2>
-          <p>{studioA.description}</p>
+          <p>{studioA.description.description}</p>
           <p>Стоимость от {studioA.price} в час</p>
           <p>
             <a href={studioA.link}>Подробности</a>
@@ -66,7 +63,7 @@ export const Studio = ({
       right={
         <div>
           <h2>{studioB.title}</h2>
-          <p>{studioB.description}</p>
+          <p>{studioB.description.description}</p>
           <p>Стоимость от {studioB.price} в час</p>
           <p>
             <a href={studioB.link}>Подробности</a>
@@ -82,7 +79,7 @@ export const Studio = ({
       right={
         <div>
           <h2>{vocalRecord.title}</h2>
-          <p>{vocalRecord.description}</p>
+          <p>{vocalRecord.description.description}</p>
           <p>Стоимость от {vocalRecord.price} в час</p>
           <p>
             <a href={vocalRecord.link}>Подробности</a>
@@ -96,7 +93,7 @@ export const Studio = ({
       left={
         <div>
           <h2>{toolsRecording.title}</h2>
-          <p>{toolsRecording.description}</p>
+          <p>{toolsRecording.description.description}</p>
           <p>Стоимость от {toolsRecording.price} в час</p>
           <p>
             <a href={toolsRecording.link}>Подробности</a>
@@ -118,7 +115,7 @@ export const Studio = ({
       left={
         <div>
           <h2>{production.title}</h2>
-          <p>{production.description}</p>
+          <p>{production.description.description}</p>
           <p>Стоимость от {production.price} в час</p>
           <p>
             <a href={production.link}>Подробности</a>

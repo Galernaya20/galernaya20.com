@@ -49,6 +49,15 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   )
   const studioResults = await graphql(
     `
+      fragment InfoWithPrice on ContentfulInfoWithPrice {
+        title
+        description {
+          description
+        }
+        price
+        link
+      }
+
       {
         contentfulStudioPage {
           title
@@ -83,6 +92,21 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
               }
             }
           }
+          studioA {
+            ...InfoWithPrice
+          }
+          studioB {
+            ...InfoWithPrice
+          }
+          vocalRecord {
+            ...InfoWithPrice
+          }
+          toolsRecording {
+            ...InfoWithPrice
+          }
+          production {
+            ...InfoWithPrice
+          }
         }
       }
     `,
@@ -114,7 +138,6 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   })
 
   const studioData = require('./src/components/pages/Studio/fixture')
-
   createPage({
     path: '/',
     component: slash(Studio),
@@ -122,6 +145,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       header: studioResults.data.contentfulStudioPage.header,
       reviews: studioResults.data.contentfulStudioPage.review,
       logos: studioResults.data.contentfulStudioPage.logo,
+      studioA: studioResults.data.contentfulStudioPage.studioA,
+      studioB: studioResults.data.contentfulStudioPage.studioB,
+      vocalRecord: studioResults.data.contentfulStudioPage.vocalRecord,
+      toolsRecording: studioResults.data.contentfulStudioPage.toolsRecording,
+      production: studioResults.data.contentfulStudioPage.production,
     }),
   })
   return Promise.resolve()
