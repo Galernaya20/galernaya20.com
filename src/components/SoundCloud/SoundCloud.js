@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const SoundContainer = styled.div``
 
-export const SoundCloud = ({content}: string) => (
+export const SoundCloud = ({content}: {content: string}) => (
   <SoundContainer>
     <div
       dangerouslySetInnerHTML={{

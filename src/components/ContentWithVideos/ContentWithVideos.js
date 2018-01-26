@@ -38,6 +38,7 @@ export const ContentWithVideos = ({
   videoRight: string,
   videoSize?: {width: number, height: number},
 }) => (
+  //
   <Content centered>
     <Container>
       {children}

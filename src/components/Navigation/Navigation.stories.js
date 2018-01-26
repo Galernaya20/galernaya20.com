@@ -4,6 +4,6 @@ import {storiesOf} from '@storybook/react'
 import {Navigation} from './Navigation.js'
 import studioData from '../pages/Studio/fixture'
 
-const {navigations} = studioData
+const {navigation} = studioData
 
-storiesOf('Navigation', module).add('navigation', () => <Navigation navigations={navigations} />)
+storiesOf('Navigation', module).add('navigation', () => <Navigation navigation={navigation} />)

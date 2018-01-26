@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 export type PropsT = {
-  navigations: Array<{
+  navigation: Array<{
     title: string,
     link: string,
   }>,
@@ -21,10 +21,10 @@ const Link = styled.a`
   color: #000;
 `
 
-export const Navigation = ({navigations}: PropsT) => {
+export const Navigation = ({navigation}: PropsT) => {
   return (
     <List>
-      {navigations.map((item, index) => (
+      {navigation.map((item, index) => (
         <Item key={index}>
           <Link href={item.link} target="_blank">
             {item.title}

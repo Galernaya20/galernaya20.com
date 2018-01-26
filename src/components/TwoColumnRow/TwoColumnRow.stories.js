@@ -11,7 +11,7 @@ storiesOf('TwoColumnRow', module).add('default', () => (
     left={
       <div>
         <h2>{studioA.title}</h2>
-        <p>{studioA.description}</p>
+        <p>{studioA.description.description}</p>
         <p>Стоимость от {studioA.price} в час</p>
         <p>
           <a href={studioA.link}>Подробности</a>
@@ -21,7 +21,7 @@ storiesOf('TwoColumnRow', module).add('default', () => (
     right={
       <div>
         <h2>{studioB.title}</h2>
-        <p>{studioB.description}</p>
+        <p>{studioB.description.description}</p>
         <p>Стоимость от {studioB.price} в час</p>
         <p>
           <a href={studioB.link}>Подробности</a>

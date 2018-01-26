@@ -26,33 +26,33 @@ type InfoWithPriceT = {
 
 type StudioT = {
   header: HeaderT,
-  logos: LogosT,
   studioA: InfoWithPriceT,
   studioB: InfoWithPriceT,
-  liveRecord: {title: string, description: {description: string}, price: string, videoLeft: string, videoRight: string},
+  liveRecord: {title: string, description: {description: string}, price: number, videoLeft: string, videoRight: string},
   production: InfoWithPriceT,
   vocalRecord: InfoWithPriceT,
   toolsRecording: InfoWithPriceT,
-  navigations: NavigationT,
   soundCloud: Array<{
     title: string,
     iframe: {
       iframe: string,
     },
   }>,
-} & ReviewsT
+} & ReviewsT &
+  NavigationT &
+  LogosT
 
 export const Studio = ({
   header,
-  logos,
+  logo,
   studioA,
   studioB,
   liveRecord,
   production,
   vocalRecord,
   toolsRecording,
-  reviews,
-  navigations,
+  review,
+  navigation,
   soundCloud,
 }: StudioT) => (
   <div>
@@ -84,7 +84,7 @@ export const Studio = ({
       }
     />
 
-    <ClientLogos logos={logos} />
+    <ClientLogos logo={logo} />
 
     <TwoColumnRow
       left={<SoundCloud content={soundCloud[0].iframe.iframe} />}
@@ -132,11 +132,11 @@ export const Studio = ({
           </p>
         </div>
       }
-      right={<Navigation navigations={navigations} />}
+      right={<Navigation navigation={navigation} />}
     />
 
     <Content>
-      <Reviews reviews={reviews} />
+      <Reviews review={review} />
     </Content>
 
     <Footer />

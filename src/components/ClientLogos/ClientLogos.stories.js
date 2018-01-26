@@ -6,4 +6,4 @@ import studioData from '../pages/Studio/fixture'
 
 const {logo} = studioData
 
-storiesOf('ClientLogos', module).add('ClientLogos', () => <ClientLogos logos={logo} />)
+storiesOf('ClientLogos', module).add('ClientLogos', () => <ClientLogos logo={logo} />)

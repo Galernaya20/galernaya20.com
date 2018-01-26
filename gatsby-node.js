@@ -156,23 +156,10 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     },
   })
 
-  const studioData = require('./src/components/pages/Studio/fixture')
   createPage({
     path: '/',
     component: slash(Studio),
-    context: Object.assign({}, studioData, {
-      header: studioResults.data.contentfulStudioPage.header,
-      reviews: studioResults.data.contentfulStudioPage.review,
-      logos: studioResults.data.contentfulStudioPage.logo,
-      studioA: studioResults.data.contentfulStudioPage.studioA,
-      studioB: studioResults.data.contentfulStudioPage.studioB,
-      vocalRecord: studioResults.data.contentfulStudioPage.vocalRecord,
-      toolsRecording: studioResults.data.contentfulStudioPage.toolsRecording,
-      production: studioResults.data.contentfulStudioPage.production,
-      navigations: studioResults.data.contentfulStudioPage.navigation,
-      soundCloud: studioResults.data.contentfulStudioPage.soundCloud,
-      liveRecord: studioResults.data.contentfulStudioPage.liveRecord,
-    }),
+    context: studioResults.data.contentfulStudioPage,
   })
   return Promise.resolve()
 }
