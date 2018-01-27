@@ -90,7 +90,7 @@ export const Production = ({
         </BlockLayout>
       }
     />
-    <ClientLogos logo={logos} />
+    <ClientLogos logos={logos} />
     <BlockLayout>
       <ContentWithVideos videoLeft={studioRental.videoLeft} videoRight={studioRental.videoRight}>
         <h2>{studioRental.title}</h2>
@@ -99,7 +99,7 @@ export const Production = ({
       </ContentWithVideos>
     </BlockLayout>
     <div>
-      <Reviews review={reviews} />
+      <Reviews reviews={reviews} />
     </div>
     <Footer />
   </div>

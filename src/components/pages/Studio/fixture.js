@@ -13,7 +13,7 @@ module.exports = {
       },
     },
   },
-  review: [
+  reviews: [
     {
       name: 'Иван иванов',
       description: {
@@ -39,7 +39,7 @@ module.exports = {
       },
     },
   ],
-  logo: [
+  logos: [
     {
       title: 'Yota',
       image: {

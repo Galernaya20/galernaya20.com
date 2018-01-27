@@ -4,6 +4,6 @@ import {storiesOf} from '@storybook/react'
 import {ClientLogos} from './ClientLogos.js'
 import studioData from '../pages/Studio/fixture'
 
-const {logo} = studioData
+const {logos} = studioData
 
-storiesOf('ClientLogos', module).add('ClientLogos', () => <ClientLogos logo={logo} />)
+storiesOf('ClientLogos', module).add('ClientLogos', () => <ClientLogos logos={logos} />)

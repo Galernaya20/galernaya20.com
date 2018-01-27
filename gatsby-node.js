@@ -75,7 +75,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
               }
             }
           }
-          review {
+          reviews {
             name
             description {
               description
@@ -86,7 +86,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
               }
             }
           }
-          logo {
+          logos {
             title
             image {
               file {
@@ -285,7 +285,7 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     context: schoolResults.data.contentfulSchoolPage,
   })
   createPage({
-    path: '/prod',
+    path: '/production',
     component: slash(Production),
     context: productionResults.data.contentfulProductionPage,
   })
