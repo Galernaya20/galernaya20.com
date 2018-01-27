@@ -5,6 +5,7 @@ const slash = require('slash')
 
 const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
 const Studio = path.resolve(process.cwd(), 'src/components/pages/Studio/Studio.js')
+const School = path.resolve(process.cwd(), 'src/components/pages/School/School.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -130,6 +131,54 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       }
     `,
   )
+  const schoolResults = await graphql(
+    `
+      fragment InfoWithPrice on ContentfulInfoWithPrice {
+        title
+        description {
+          description
+        }
+        price
+        link
+      }
+
+      {
+        contentfulSchoolPage {
+          title
+          header {
+            title
+            description {
+              description
+            }
+          }
+          selfProduction {
+            ...InfoWithPrice
+          }
+          recordingAndMixing {
+            ...InfoWithPrice
+          }
+          dj {
+            ...InfoWithPrice
+          }
+          selfProductionMedia {
+            file {
+              url
+            }
+          }
+          recordingAndMixingMedia {
+            file {
+              url
+            }
+          }
+          djMedia {
+            file {
+              url
+            }
+          }
+        }
+      }
+    `,
+  )
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -160,6 +209,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/',
     component: slash(Studio),
     context: studioResults.data.contentfulStudioPage,
+  })
+  createPage({
+    path: '/school',
+    component: slash(School),
+    context: schoolResults.data.contentfulSchoolPage,
   })
   return Promise.resolve()
 }
