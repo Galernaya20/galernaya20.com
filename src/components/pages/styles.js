@@ -19,3 +19,8 @@ export const Layout = styled.div`
 export const BlockLayout = Layout.extend`
   min-height: 512px;
 `
+export const Description = styled.p`
+  height: 159px;
+  overflow: hidden;
+  padding: 0;
+`
