@@ -35,7 +35,6 @@ type ProductionT = {
     videoRight: string,
   },
   soundCloud: Array<{
-    title: string,
     iframe: {
       iframe: string,
     },
