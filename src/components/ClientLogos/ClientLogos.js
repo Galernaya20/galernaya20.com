@@ -24,7 +24,7 @@ const LogoImg = styled.img`
   max-height: 100px;
 `
 export type PropsT = {
-  logo: Array<{
+  logos: Array<{
     title: string,
     image: {
       file: {
@@ -34,10 +34,10 @@ export type PropsT = {
   }>,
 }
 
-export const ClientLogos = ({logo}: PropsT) => {
+export const ClientLogos = ({logos}: PropsT) => {
   return (
     <Self>
-      {logo.map((item, index) => (
+      {logos.map((item, index) => (
         <Logo key={index}>
           <LogoImg src={item.image.file.url} />
         </Logo>

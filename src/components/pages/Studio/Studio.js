@@ -51,14 +51,14 @@ const Description = styled.p`
 
 export const Studio = ({
   header,
-  logo,
+  logos,
   studioA,
   studioB,
   liveRecord,
   production,
   vocalRecord,
   toolsRecording,
-  review,
+  reviews,
   navigation,
   soundCloud,
 }: StudioT) => (
@@ -91,7 +91,7 @@ export const Studio = ({
       }
     />
 
-    <ClientLogos logo={logo} />
+    <ClientLogos logos={logos} />
 
     <TwoColumnRow
       left={
@@ -149,7 +149,7 @@ export const Studio = ({
     />
 
     <div>
-      <Reviews review={review} />
+      <Reviews reviews={reviews} />
     </div>
 
     <Footer />

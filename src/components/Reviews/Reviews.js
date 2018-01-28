@@ -6,7 +6,7 @@ import {LeftArrowIcon} from '../icons/LeftArrowIcon'
 import {RightArrowIcon} from '../icons/RightArrowIcon'
 
 export type PropsT = {
-  review: Array<{
+  reviews: Array<{
     name: string,
     description: {
       description: string,
@@ -86,8 +86,8 @@ export class Reviews extends Component<PropsT, {activeIndex: number}> {
     e.preventDefault()
 
     let index = this.state.activeIndex
-    const {review} = this.props
-    const reviewsLength = review.length
+    const {reviews} = this.props
+    const reviewsLength = reviews.length
 
     if (index < 1) {
       index = reviewsLength
@@ -103,8 +103,8 @@ export class Reviews extends Component<PropsT, {activeIndex: number}> {
   goToNextSlide(e: any) {
     e.preventDefault()
     let index = this.state.activeIndex
-    const {review} = this.props
-    const reviewsLength = review.length - 1
+    const {reviews} = this.props
+    const reviewsLength = reviews.length - 1
 
     if (index === reviewsLength) {
       index = -1
@@ -118,21 +118,21 @@ export class Reviews extends Component<PropsT, {activeIndex: number}> {
   }
   render() {
     const {activeIndex} = this.state
-    const {review} = this.props
+    const {reviews} = this.props
     return (
       <ReviewsContainer>
-        {review.length > 1 ? (
+        {reviews.length > 1 ? (
           <LeftArrow onClick={e => this.goToPrevSlide(e)}>
             <LeftArrowIcon />
           </LeftArrow>
         ) : null}
-        {review.length > 1 ? (
+        {reviews.length > 1 ? (
           <RightArrow onClick={e => this.goToNextSlide(e)}>
             <RightArrowIcon />
           </RightArrow>
         ) : null}
 
-        {review.map((review, index) => (
+        {reviews.map((review, index) => (
           <Review index={index} activeIndex={activeIndex} key={index}>
             <AuthorPicture>
               <img src={review.image.file.url} width="160" />
