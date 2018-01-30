@@ -6,6 +6,7 @@ const slash = require('slash')
 const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
 const Studio = path.resolve(process.cwd(), 'src/components/pages/Studio/Studio.js')
 const School = path.resolve(process.cwd(), 'src/components/pages/School/School.js')
+const Team = path.resolve(process.cwd(), 'src/components/pages/Team/Team.js')
 const Production = path.resolve(process.cwd(), 'src/components/pages/Production/Production.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
@@ -248,6 +249,27 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       }
     `,
   )
+
+  const teamResult = await graphql(
+    `
+      {
+        allContentfulPost(filter: {id: {eq: "post_829"}}) {
+          edges {
+            node {
+              id
+              title {
+                title
+              }
+              content {
+                content
+              }
+            }
+          }
+        }
+      }
+    `,
+  )
+
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -271,6 +293,15 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     context: {
       title: trainingResult.data.allContentfulPost.edges[0].node.title.title,
       content: trainingResult.data.allContentfulPost.edges[0].node.content.content,
+    },
+  })
+
+  createPage({
+    path: '/team',
+    component: slash(Team),
+    context: {
+      title: teamResult.data.allContentfulPost.edges[0].node.title.title,
+      content: teamResult.data.allContentfulPost.edges[0].node.content.content,
     },
   })
 
