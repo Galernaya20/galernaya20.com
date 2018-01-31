@@ -8,6 +8,7 @@ const Studio = path.resolve(process.cwd(), 'src/components/pages/Studio/Studio.j
 const School = path.resolve(process.cwd(), 'src/components/pages/School/School.js')
 const Team = path.resolve(process.cwd(), 'src/components/pages/Team/Team.js')
 const Production = path.resolve(process.cwd(), 'src/components/pages/Production/Production.js')
+const Equipment = path.resolve(process.cwd(), 'src/components/pages/Equipment/Equipment.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -270,6 +271,25 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     `,
   )
 
+  const equipmentResult = await graphql(`
+    {
+      contentfulEquipmentPage {
+        header {
+          title
+          description {
+            description
+          }
+        }
+        tabs {
+          title
+          content {
+            content
+          }
+        }
+      }
+    }
+  `)
+
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -319,6 +339,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/production',
     component: slash(Production),
     context: productionResults.data.contentfulProductionPage,
+  })
+  createPage({
+    path: '/equipment',
+    component: slash(Equipment),
+    context: equipmentResult.data.contentfulEquipmentPage,
   })
   return Promise.resolve()
 }
