@@ -373,6 +373,5 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     component: slash(Equipment),
     context: equipmentResult.data.contentfulEquipmentPage,
   })
-
   return Promise.resolve()
 }
