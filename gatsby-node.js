@@ -8,6 +8,7 @@ const Studio = path.resolve(process.cwd(), 'src/components/pages/Studio/Studio.j
 const School = path.resolve(process.cwd(), 'src/components/pages/School/School.js')
 const Team = path.resolve(process.cwd(), 'src/components/pages/Team/Team.js')
 const Production = path.resolve(process.cwd(), 'src/components/pages/Production/Production.js')
+const InTheBox = path.resolve(process.cwd(), 'src/components/pages/InTheBox/InTheBox.js')
 const Equipment = path.resolve(process.cwd(), 'src/components/pages/Equipment/Equipment.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
@@ -250,7 +251,29 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       }
     `,
   )
-
+  const inTheBoxResults = await graphql(
+    `
+      {
+        contentfulInTheBox {
+          header {
+            title
+            description {
+              description
+            }
+          }
+          introduction {
+            introduction
+          }
+          aboutCourse {
+            aboutCourse
+          }
+          pricesAndContacts {
+            pricesAndContacts
+          }
+        }
+      }
+    `,
+  )
   const teamResult = await graphql(
     `
       {
@@ -339,6 +362,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/production',
     component: slash(Production),
     context: productionResults.data.contentfulProductionPage,
+  })
+  createPage({
+    path: '/inthebox',
+    component: slash(InTheBox),
+    context: inTheBoxResults.data.contentfulInTheBox,
   })
   createPage({
     path: '/equipment',
