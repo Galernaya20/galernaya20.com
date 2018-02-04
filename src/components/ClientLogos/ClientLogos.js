@@ -25,7 +25,7 @@ const LogoImg = styled.img`
 `
 export type PropsT = {
   logos: Array<{
-    title: string,
+    title?: string,
     image: {
       file: {
         url: string,

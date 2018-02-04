@@ -10,6 +10,7 @@ const Team = path.resolve(process.cwd(), 'src/components/pages/Team/Team.js')
 const Production = path.resolve(process.cwd(), 'src/components/pages/Production/Production.js')
 const InTheBox = path.resolve(process.cwd(), 'src/components/pages/InTheBox/InTheBox.js')
 const Equipment = path.resolve(process.cwd(), 'src/components/pages/Equipment/Equipment.js')
+const StudioA = path.resolve(process.cwd(), 'src/components/pages/StudioA/StudioA.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -313,6 +314,77 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     }
   `)
 
+  const studioAResult = await graphql(`
+    {
+      allContentfulStudioDescriptionPage(filter: {id: {eq: "c28EHNdy71uIq4Co2imISU6"}}) {
+        edges {
+          node {
+            title
+            header {
+              title
+              description {
+                description
+              }
+              media {
+                type
+                src {
+                  src
+                }
+              }
+            }
+            info {
+              title
+              description {
+                description
+              }
+            }
+            infoMedia {
+              file {
+                url
+              }
+            }
+            navigation {
+              title
+              link
+            }
+            production {
+              title
+              description {
+                description
+              }
+              price
+              link
+            }
+            reviews {
+              name
+              description {
+                description
+              }
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            logos {
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            rentPrice {
+              title
+              description {
+                description
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -372,6 +444,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/equipment',
     component: slash(Equipment),
     context: equipmentResult.data.contentfulEquipmentPage,
+  })
+  createPage({
+    path: '/studio-a',
+    component: slash(StudioA),
+    context: studioAResult.data.allContentfulStudioDescriptionPage.edges[0].node,
   })
   return Promise.resolve()
 }
