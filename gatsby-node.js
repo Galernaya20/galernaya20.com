@@ -384,6 +384,76 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
       }
     }
   `)
+  const studioBResult = await graphql(`
+    {
+      allContentfulStudioDescriptionPage(filter: {id: {eq: "c6yaFmtKBFKEUOSAuCcU4Gw"}}) {
+        edges {
+          node {
+            title
+            header {
+              title
+              description {
+                description
+              }
+              media {
+                type
+                src {
+                  src
+                }
+              }
+            }
+            info {
+              title
+              description {
+                description
+              }
+            }
+            infoMedia {
+              file {
+                url
+              }
+            }
+            navigation {
+              title
+              link
+            }
+            production {
+              title
+              description {
+                description
+              }
+              price
+              link
+            }
+            reviews {
+              name
+              description {
+                description
+              }
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            logos {
+              image {
+                file {
+                  url
+                }
+              }
+            }
+            rentPrice {
+              title
+              description {
+                description
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
@@ -449,6 +519,11 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/studio-a',
     component: slash(StudioA),
     context: studioAResult.data.allContentfulStudioDescriptionPage.edges[0].node,
+  })
+  createPage({
+    path: '/studio-b',
+    component: slash(StudioA),
+    context: studioBResult.data.allContentfulStudioDescriptionPage.edges[0].node,
   })
   return Promise.resolve()
 }
