@@ -11,6 +11,7 @@ const Production = path.resolve(process.cwd(), 'src/components/pages/Production/
 const InTheBox = path.resolve(process.cwd(), 'src/components/pages/InTheBox/InTheBox.js')
 const Equipment = path.resolve(process.cwd(), 'src/components/pages/Equipment/Equipment.js')
 const StudioA = path.resolve(process.cwd(), 'src/components/pages/StudioA/StudioA.js')
+const Prices = path.resolve(process.cwd(), 'src/components/pages/Prices/Prices.js')
 
 exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
   const {createPage} = boundActionCreators
@@ -455,6 +456,24 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     }
   `)
 
+  const pricesResult = await graphql(`
+    {
+      allContentfulPost(filter: {id: {eq: "post_874"}}) {
+        edges {
+          node {
+            id
+            title {
+              title
+            }
+            content {
+              content
+            }
+          }
+        }
+      }
+    }
+  `)
+
   if (contactsResult.errors) {
     throw new Error(contactsResult.errors)
   }
@@ -524,6 +543,17 @@ exports.createPages = async ({graphql, boundActionCreators} /*:any*/) => {
     path: '/studio-b',
     component: slash(StudioA),
     context: studioBResult.data.allContentfulStudioDescriptionPage.edges[0].node,
+  })
+  createPage({
+    path: '/prices',
+    component: slash(Prices),
+    context: {
+      header: {
+        title: pricesResult.data.allContentfulPost.edges[0].node.title.title,
+        description: {description: 'Цены студии звукозаписи. Цены на аренду оборудования для мероприятий'},
+      },
+      content: pricesResult.data.allContentfulPost.edges[0].node.content.content.replace(/\n/g, '<br />'),
+    },
   })
   return Promise.resolve()
 }
