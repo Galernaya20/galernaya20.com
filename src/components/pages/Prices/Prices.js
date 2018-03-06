@@ -25,3 +25,9 @@ export const Prices = ({header, content}: PricesT) => (
     <Footer />
   </div>
 )
+
+const UnwrapPathContext = ({pathContext}: *) => {
+  return <Prices {...pathContext} />
+}
+
+export default UnwrapPathContext

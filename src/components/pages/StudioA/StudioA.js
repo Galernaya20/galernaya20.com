@@ -28,10 +28,11 @@ const Img = styled.img`
   height: auto;
 `
 const PriceTitle = styled.h2`
+  padding-top: 10px;
   text-align: center;
 `
 const PriceDescription = styled.div`
-  min-heigh: 300px;
+  white-space: pre-line;
 `
 
 type InfoWithPriceT = {

@@ -10,6 +10,7 @@ exports.createPages = async (gatsby /*:any*/) => {
   await require('./inthebox')(gatsby)
   await require('./equipment')(gatsby)
   await require('./studioA')(gatsby)
+  await require('./prices')(gatsby)
 
   return Promise.resolve()
 }

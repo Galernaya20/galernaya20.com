@@ -173,7 +173,7 @@ export class NavBar extends Component<{}, {isOpen: boolean}> {
                   <Link to="/team">Команда</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link to="/price">Цены</Link>
+                  <Link to="/prices">Цены</Link>
                 </MenuItem>
                 <MenuItem>
                   <Link to="/contacts">Контакты</Link>
