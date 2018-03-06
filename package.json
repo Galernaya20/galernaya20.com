@@ -16,15 +16,16 @@
     "slash": "^1.0.0",
     "styled-components": "^2.4.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "clean": "rm -rf .cache && rm -rf node_modules && rm -rf public",
     "develop": "gatsby develop",
-    "format":
-      "prettier-eslint --trailing-comma all --no-semi --single-quote --print-width 120 --jsx-bracket-same-line --write 'package.json' 'src/**/*.js' 'stories/**/*.js'",
+    "format": "prettier-eslint --trailing-comma all --no-semi --single-quote --print-width 120 --jsx-bracket-same-line --write 'package.json' 'src/**/*.js' 'stories/**/*.js'",
     "test": "npm run lint",
     "lint": "eslint ./src ./stories",
     "precommit": "lint-staged",
@@ -51,8 +52,14 @@
     "webpack": "^3.8.1"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["format", "eslint", "git add"],
-    "*.{css}": ["stylelint"]
+    "*.{js,jsx}": [
+      "format",
+      "eslint",
+      "git add"
+    ],
+    "*.{css}": [
+      "stylelint"
+    ]
   },
   "repository": "git@github.com:Galernaya20/galernaya20.com.git"
 }

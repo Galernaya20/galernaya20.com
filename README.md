@@ -5,7 +5,6 @@ Node version is v8.7.0
 flow version 0.66.0
 
 npm install --global yarn@v0.24.6
-//
 
 # Gatsby app install and run
 
