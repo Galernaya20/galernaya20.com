@@ -4,7 +4,7 @@ const path = require('path')
 const Prices = path.resolve(process.cwd(), 'src/components/pages/Prices/Prices.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const pricesResult = await graphql(`
+  const result = await graphql(`
     {
       allContentfulPost(filter: {id: {eq: "post_874"}}) {
         edges {
@@ -27,10 +27,10 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
     component: slash(Prices),
     context: {
       header: {
-        title: pricesResult.data.allContentfulPost.edges[0].node.title.title,
+        title: result.data.allContentfulPost.edges[0].node.title.title,
         description: {description: 'Цены студии звукозаписи. Цены на аренду оборудования для мероприятий'},
       },
-      content: pricesResult.data.allContentfulPost.edges[0].node.content.content.replace(/\n/g, '<br />'),
+      content: result.data.allContentfulPost.edges[0].node.content.content.replace(/\n/g, '<br />'),
     },
   })
 }

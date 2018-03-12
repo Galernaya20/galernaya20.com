@@ -4,7 +4,7 @@ const path = require('path')
 const RawContentTitle = path.resolve(process.cwd(), 'src/components/pages/RawContentTitle/RawContentTitle.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const trainingResult = await graphql(
+  const result = await graphql(
     `
       {
         allContentfulPost(filter: {id: {eq: "post_2238"}}) {
@@ -24,16 +24,16 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
     `,
   )
 
-  if (trainingResult.errors) {
-    throw new Error(trainingResult.errors)
+  if (result.errors) {
+    throw new Error(result.errors)
   }
 
   createPage({
     path: '/training',
     component: slash(RawContentTitle),
     context: {
-      title: trainingResult.data.allContentfulPost.edges[0].node.title.title,
-      content: trainingResult.data.allContentfulPost.edges[0].node.content.content,
+      title: result.data.allContentfulPost.edges[0].node.title.title,
+      content: result.data.allContentfulPost.edges[0].node.content.content,
     },
   })
 }
