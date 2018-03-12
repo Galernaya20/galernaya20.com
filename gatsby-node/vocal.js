@@ -6,7 +6,7 @@ const OneBlockPage = path.resolve(process.cwd(), 'src/components/pages/OneBlockP
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
   const result = await graphql(`
     {
-      allContentfulOneBlockPage(filter: {id: {eq: "c1kAFXNU6sAGIS0AqKccS8S"}}) {
+      allContentfulOneBlockPage(filter: {id: {eq: "c2NiSU4IKRGMQSaKyEqYO88"}}) {
         edges {
           node {
             id
