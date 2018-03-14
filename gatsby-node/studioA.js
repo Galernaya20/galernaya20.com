@@ -4,7 +4,7 @@ const path = require('path')
 const StudioA = path.resolve(process.cwd(), 'src/components/pages/StudioA/StudioA.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const studioAResult = await graphql(`
+  const result = await graphql(`
     {
       allContentfulStudioDescriptionPage(filter: {id: {eq: "c28EHNdy71uIq4Co2imISU6"}}) {
         edges {
@@ -77,6 +77,6 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
   createPage({
     path: '/studio-a',
     component: slash(StudioA),
-    context: studioAResult.data.allContentfulStudioDescriptionPage.edges[0].node,
+    context: result.data.allContentfulStudioDescriptionPage.edges[0].node,
   })
 }

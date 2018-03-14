@@ -1,6 +1,7 @@
 //@flow
 
 exports.createPages = async (gatsby /*:any*/) => {
+  await require('./main')(gatsby)
   await require('./arrangement')(gatsby)
   await require('./bitmaking')(gatsby)
   await require('./instruments')(gatsby)
@@ -11,7 +12,6 @@ exports.createPages = async (gatsby /*:any*/) => {
   await require('./contacts')(gatsby)
   await require('./training')(gatsby)
   await require('./team')(gatsby)
-  await require('./main')(gatsby)
   await require('./school')(gatsby)
   await require('./production')(gatsby)
   await require('./inthebox')(gatsby)

@@ -4,7 +4,7 @@ const path = require('path')
 const InTheBox = path.resolve(process.cwd(), 'src/components/pages/InTheBox/InTheBox.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const inTheBoxResults = await graphql(
+  const result = await graphql(
     `
       {
         contentfulInTheBox {
@@ -31,6 +31,6 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
   createPage({
     path: '/inthebox',
     component: slash(InTheBox),
-    context: inTheBoxResults.data.contentfulInTheBox,
+    context: result.data.contentfulInTheBox,
   })
 }

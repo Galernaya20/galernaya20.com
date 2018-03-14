@@ -4,7 +4,7 @@ const path = require('path')
 const School = path.resolve(process.cwd(), 'src/components/pages/School/School.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const schoolResults = await graphql(
+  const result = await graphql(
     `
       fragment InfoWithPrice on ContentfulInfoWithPrice {
         title
@@ -56,6 +56,6 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
   createPage({
     path: '/school',
     component: slash(School),
-    context: schoolResults.data.contentfulSchoolPage,
+    context: result.data.contentfulSchoolPage,
   })
 }

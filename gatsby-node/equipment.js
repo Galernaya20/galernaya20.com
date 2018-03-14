@@ -4,7 +4,7 @@ const path = require('path')
 const Equipment = path.resolve(process.cwd(), 'src/components/pages/Equipment/Equipment.js')
 
 module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
-  const equipmentResult = await graphql(`
+  const result = await graphql(`
     {
       contentfulEquipmentPage {
         header {
@@ -26,6 +26,6 @@ module.exports = async ({graphql, boundActionCreators: {createPage}}) => {
   createPage({
     path: '/equipment',
     component: slash(Equipment),
-    context: equipmentResult.data.contentfulEquipmentPage,
+    context: result.data.contentfulEquipmentPage,
   })
 }
