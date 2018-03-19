@@ -6,6 +6,7 @@ import {HamburgerIcon} from '../icons/HamburgerIcon'
 import ClickOutside from 'react-click-outside'
 import {Container} from '../Container/Container'
 
+import logoImgUrl from './Logo.png'
 const MenuItem = styled.li`
   .menuItem {
     display: flex;
@@ -183,7 +184,7 @@ export class NavBar extends Component<{}, {isOpen: boolean}> {
 
             <StyledLink to="/">
               <LogoImg
-                src="https://via.placeholder.com/150x50"
+                src={logoImgUrl}
                 alt="Galernaya 20 - студия звукозаписи, аренда оборудования, продюсерский центр, аранжировка песен"
               />
             </StyledLink>
